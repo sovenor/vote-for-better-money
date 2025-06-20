@@ -104,8 +104,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Email**: hi@voteforbetter.money
-- **Nostr**: vfbm@voteforbetter.money
+- **Email**: hi@bitcoin.rocks
 - **Website**: [https://voteforbetter.money](https://voteforbetter.money)
 
 ## Mission
