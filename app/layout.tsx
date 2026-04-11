@@ -83,7 +83,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: SITE_NAME,
               url: SITE_URL,
-              logo: `${SITE_URL}/img/logo-dark-mode.png`,
+              logo: `${SITE_URL}/img/logo-dark-mode-v2.png`,
               contactPoint: {
                 "@type": "ContactPoint",
                 email: "hi@bitcoin.rocks",

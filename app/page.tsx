@@ -31,7 +31,7 @@ export default async function HomePage() {
       {/* Hero Section */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
         <Image
-          src="/img/logo-dark-mode.png"
+          src="/img/logo-dark-mode-v2.png"
           alt="Vote For Better Money"
           width={100}
           height={100}

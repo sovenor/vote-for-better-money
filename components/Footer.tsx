@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center gap-6">
           <Link href="/" className="no-underline">
             <Image
-              src="/img/logo-dark-mode.png"
+              src="/img/logo-dark-mode-v2.png"
               alt="Vote For Better Money"
               width={60}
               height={60}

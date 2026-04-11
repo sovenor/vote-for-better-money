@@ -17,7 +17,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 no-underline shrink-0">
             <Image
-              src="/img/logo-dark-mode.png"
+              src="/img/logo-dark-mode-v2.png"
               alt="Vote For Better Money"
               width={40}
               height={40}
