@@ -32,7 +32,7 @@ export default function StatCard({
         {value}
       </p>
       {detail && (
-        <p className={`text-[10px] sm:text-xs mb-1 ${valueColor}`}>{detail}</p>
+        <p className={`text-xs sm:text-sm mb-1 ${valueColor}`}>{detail}</p>
       )}
       {sublabel && (
         <p className="text-xs text-muted">{sublabel}</p>
