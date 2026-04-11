@@ -272,24 +272,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* CTA Buttons */}
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8 flex flex-col items-center gap-4">
-        <Link href="/learn" className="btn-primary">
-          Learn About Bitcoin
-        </Link>
-        <Link href="/how-to-use-bitcoin" className="btn-secondary">
-          How to Use Bitcoin
-        </Link>
-        <a
-          href={EXTERNAL_LINKS.bitcoinRocks}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          bitcoin.rocks →
-        </a>
-      </section>
-
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
