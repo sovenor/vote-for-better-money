@@ -63,8 +63,9 @@ export default function FlyersPage() {
             <Image
               src="/img/flyer-v2-preview.png"
               alt="Vote For Better Money flyer preview — click to download PDF"
-              width={600}
-              height={776}
+              width={1200}
+              height={1553}
+              quality={100}
               className="w-full h-auto rounded-lg"
             />
           </a>
