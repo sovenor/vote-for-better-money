@@ -77,16 +77,15 @@ export default async function HomePage() {
           </h2>
 
           <p>
-            The dollar in your bank account buys you less every year. That&apos;s
+            The dollars in your bank account buy you less every year. That&apos;s
             because there is no fixed limit on how many dollars can be created.
           </p>
 
           <p>
             This unlimited supply is the root cause of inflation. Over recent
-            years,{" "}
-            <a href={EXTERNAL_LINKS.fredM1} target="_blank" rel="noopener noreferrer">
-              the total amount of dollars in existence has increased dramatically.
-            </a>
+            years, the total amount of dollars in existence has {" "}
+              <a href={EXTERNAL_LINKS.fredM1} target="_blank" rel="noopener noreferrer">increased dramatically.
+              </a>
           </p>
 
           <div className="my-8 rounded-xl overflow-hidden">
@@ -211,29 +210,28 @@ export default async function HomePage() {
           </div>
 
           <p>
-            <a href={EXTERNAL_LINKS.texasMining} target="_blank" rel="noopener noreferrer">
-              Americans in Texas used Bitcoin to help keep their lights on,
+              Americans in Texas used Bitcoin to help <a href={EXTERNAL_LINKS.texasMining} target="_blank" rel="noopener noreferrer">keep their lights on,
             </a>{" "}
             even during a massive storm.
           </p>
 
           <p>
-            <a href={EXTERNAL_LINKS.pennsylvaniaMining} target="_blank" rel="noopener noreferrer">
-              Americans in Pennsylvania used Bitcoin to clean up coal waste,
+            Americans in Pennsylvania used Bitcoin to <a href={EXTERNAL_LINKS.pennsylvaniaMining} target="_blank" rel="noopener noreferrer">
+              clean up coal waste,
             </a>{" "}
             even after their own government refused to.
           </p>
 
           <p>
-            <a href={EXTERNAL_LINKS.canadaTruckers} target="_blank" rel="noopener noreferrer">
-              Workers in Canada used Bitcoin to access their money,
+            Workers in Canada used Bitcoin to <a href={EXTERNAL_LINKS.canadaTruckers} target="_blank" rel="noopener noreferrer">
+              access their money,
             </a>{" "}
             even after their own government froze their bank accounts.
           </p>
 
           <p>
-            <a href={EXTERNAL_LINKS.nigeriaEndSars} target="_blank" rel="noopener noreferrer">
-              Nigerians used Bitcoin to fight for their rights,
+            Nigerians used Bitcoin to <a href={EXTERNAL_LINKS.nigeriaEndSars} target="_blank" rel="noopener noreferrer">
+              fight for their rights,
             </a>{" "}
             even after their banks stopped processing donations.
           </p>
