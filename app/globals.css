@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #111111;
+  --color-foreground: #d4d4d4;
+  --color-muted: #9ca3af;
+  --color-accent: #F7931A;
+  --color-accent-hover: #FFB347;
+  --color-card: #1a1a1a;
+  --color-card-border: #2a2a2a;
+  --color-surface: #161616;
+  --color-danger: #ef4444;
+  --color-success: #22c55e;
+  --font-sans: var(--font-myriad);
+}
+
+/* Base styles */
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), "myriad-pro", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling for dark mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Link styles */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Selection */
+::selection {
+  background: rgba(247, 147, 26, 0.3);
+  color: #fff;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Article content styles */
+.article-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.article-content strong,
+.article-content .bold {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-accent);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* CTA Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  max-width: 500px;
+}
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(247, 147, 26, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 0.625rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 2px solid var(--color-accent);
+  width: 100%;
+  max-width: 500px;
+}
+.btn-secondary:hover {
+  background: rgba(247, 147, 26, 0.1);
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Notification toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-card);
+  color: var(--color-foreground);
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--color-card-border);
+  font-size: 0.875rem;
+  z-index: 50;
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 1.7s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

@@ -1,0 +1,22 @@
+# Vote For Better Money
+> https://voteforbetter.money
+
+## About
+Vote For Better Money is an educational website that helps Americans understand why Bitcoin is better money. The site explains how inflation and money printing erode the value of the US dollar, and how Bitcoin's fixed supply of 21 million offers an alternative.
+
+## Key Pages
+- Homepage: https://voteforbetter.money
+- Learn About Bitcoin: https://voteforbetter.money/learn
+- Bitcoin is American: https://voteforbetter.money/learn/bitcoin-is-american
+- Bitcoin is Sovereign: https://voteforbetter.money/learn/bitcoin-is-sovereign
+- Bitcoin is Scarce: https://voteforbetter.money/learn/bitcoin-is-scarce
+- Bitcoin is Decentralized: https://voteforbetter.money/learn/bitcoin-is-decentralized
+- Bitcoin is Permissionless: https://voteforbetter.money/learn/bitcoin-is-permissionless
+- How to Use Bitcoin: https://voteforbetter.money/how-to-use-bitcoin
+
+## Contact
+- Email: hi@bitcoin.rocks
+- Related site: https://bitcoin.rocks
+
+## Full content
+For full page content, see: https://voteforbetter.money/llms-full.txt

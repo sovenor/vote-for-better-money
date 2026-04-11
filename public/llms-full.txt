@@ -1,0 +1,94 @@
+# Vote For Better Money — Full Content
+> https://voteforbetter.money
+
+## Homepage (/)
+Vote For Better Money is a campaign to show Americans they can choose better money.
+
+Election after election, politicians promise to fix America. But after they're elected, they rarely keep their promises. What if you could vote for better money instead?
+
+You can. Bitcoin is better money. And you don't need to wait for election day to start using it.
+
+### The Problem: Your Money is Losing Value
+The dollar in your bank account buys you less every year. There is no fixed limit on how many dollars can be created. This unlimited supply is the root cause of inflation. The total amount of dollars in existence has increased dramatically in recent years. When more money is created from nothing, the price of everything goes up — including raw materials companies buy to make their products, meaning higher prices for you.
+
+Both parties print money and cause inflation. The national debt has surpassed tens of trillions of dollars thanks to both Democrats and Republicans.
+
+### The Solution: Bitcoin is Better Money
+Inflation is when your money buys you less over time. Bitcoin doesn't have inflation. Dollars have an unlimited supply; Bitcoin has a maximum supply of 21 million. No one can print more. Historically, Bitcoin has gained purchasing power over time while the dollar has lost it.
+
+### Bitcoin is a Tool for Freedom
+The Bitcoin network isn't owned by anyone. Bitcoin is decentralized — not controlled by any government or corporation. Bitcoin is permissionless — anyone, anywhere can join. Bitcoin is American — it upholds freedom and respects proof of work.
+
+Real-world examples: Americans in Texas used Bitcoin to keep lights on during storms. Americans in Pennsylvania used Bitcoin to clean up coal waste. Workers in Canada used Bitcoin to access money after their government froze bank accounts. Nigerians used Bitcoin to fight for their rights after banks stopped processing donations.
+
+---
+
+## Learn About Bitcoin (/learn)
+A hub page linking to five educational articles about Bitcoin's key properties: American, Sovereign, Scarce, Decentralized, and Permissionless.
+
+---
+
+## Bitcoin is American (/learn/bitcoin-is-american)
+Bitcoin upholds freedom and respects proof of work — core American values.
+
+- Freedom: Bitcoin isn't controlled by anyone. It lets you handle your money without government interference.
+- Proof of Work: Computers put in effort to create Bitcoin and confirm transactions. Unlike regular money, there's a cap to Bitcoin supply.
+- Fighting Inflation: Bitcoin doesn't have inflation because there's a hard limit on supply (21 million).
+- American Values: Bitcoin brings back self-sovereignty — being in charge of your own money and getting rewarded for hard work.
+
+---
+
+## Bitcoin is Sovereign (/learn/bitcoin-is-sovereign)
+Bitcoin is a new system, independent from politicians and their broken promises. Instead of trying to change things within a broken system, Bitcoin built a new one — not controlled by politicians, open to everyone, with core American values like freedom and respect for hard work. No one can print more Bitcoin and cause inflation.
+
+---
+
+## Bitcoin is Scarce (/learn/bitcoin-is-scarce)
+Bitcoin has a maximum supply of 21 million. This cap was set by creator Satoshi Nakamoto to introduce scarcity similar to precious metals.
+
+- Mining: New Bitcoin are created through proof of work mining.
+- Halving: Mining rewards halve approximately every four years, ensuring supply never exceeds 21 million.
+- Blockchain: A decentralized network of nodes enforces the 21 million cap transparently and verifiably.
+- The last Bitcoin is expected to be mined around 2140.
+
+---
+
+## Bitcoin is Decentralized (/learn/bitcoin-is-decentralized)
+Bitcoin isn't controlled by any single entity. It's run by a global network of computers (nodes). Anyone can run a node with free software. Mining secures the network through proof of work. The software is free and open source. Once recorded, transactions can't be altered or deleted.
+
+---
+
+## Bitcoin is Permissionless (/learn/bitcoin-is-permissionless)
+Anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money. Unlike traditional banks, Bitcoin allows direct peer-to-peer transactions — like digital cash. Bitcoin can't discriminate based on personal details, wealth, or location. Traditional finance has frozen accounts (e.g., Canadian truckers) and denied services based on personal attributes.
+
+---
+
+## How to Use Bitcoin (/how-to-use-bitcoin)
+### Buy Bitcoin
+Recommended apps: Cash App, Strike, River. After buying, take full control by withdrawing to your own wallet.
+
+### Take Full Control (Self-Custody)
+Freedom money = money that can't be censored, frozen, or seized. Withdraw Bitcoin to a wallet you control (recommended: Blockstream Green). Bitcoin ETFs don't provide freedom benefits and charge annual fees. Self-custody is 100% free.
+
+### Earn Bitcoin
+A growing movement of people are being paid in Bitcoin. Small businesses accept Bitcoin. Apps like Strike can auto-convert a portion of your paycheck to Bitcoin.
+
+---
+
+## Stickers (/stickers)
+Free sticker packs with QR codes linking to educational content about Bitcoin. Available for mailing (USA only) or self-printing.
+
+## Flyers (/flyers)
+Printable flyers with QR codes for public posting in coffee shops, bulletin boards, etc.
+
+## Share Links (/links)
+Easy-to-copy links to all educational pages for sharing via text or email.
+
+## What is Nostr? (/nostr)
+Nostr is a decentralized social media protocol (not a platform). No one controls it. You can move between clients without losing followers. Bitcoin is built in natively for tipping content creators.
+
+---
+
+## Contact
+- Email: hi@bitcoin.rocks
+- Related site: https://bitcoin.rocks
