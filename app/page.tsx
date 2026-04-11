@@ -34,6 +34,12 @@ export const metadata: Metadata = {
     url: SITE_URL,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vote For Better Money — Bitcoin is Better Money",
+    description:
+      "Our money is broken. Prices keep going up. Bitcoin is better money — and you can vote for better money by using Bitcoin today.",
+  },
 };
 
 export default async function HomePage() {

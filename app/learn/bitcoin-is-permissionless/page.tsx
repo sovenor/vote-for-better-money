@@ -21,6 +21,12 @@ export const metadata: Metadata = {
       { url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bitcoin is Permissionless | Vote For Better Money",
+    description:
+      "Bitcoin is permissionless because anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money.",
+  },
 };
 
 export default function BitcoinIsPermissionlessPage() {

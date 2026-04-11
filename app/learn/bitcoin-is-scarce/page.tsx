@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/learn/bitcoin-is-scarce`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bitcoin is Scarce | Vote For Better Money",
+    description:
+      "Bitcoin is scarce because it has a maximum supply of 21 million Bitcoin. Unlike dollars, no one can print more Bitcoin.",
+  },
 };
 
 export default async function BitcoinIsScarcePage() {

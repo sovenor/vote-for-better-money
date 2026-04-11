@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/learn/bitcoin-is-decentralized`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bitcoin is Decentralized | Vote For Better Money",
+    description:
+      "Bitcoin is decentralized because it isn't controlled by any single entity like a government or corporation.",
+  },
 };
 
 export default function BitcoinIsDecentralizedPage() {

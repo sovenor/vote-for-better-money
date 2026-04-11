@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/links`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Share Links | Vote For Better Money",
+    description:
+      "Copy and share direct links to Vote For Better Money educational pages about Bitcoin via text, email, or social media.",
+  },
 };
 
 export default function LinksPage() {

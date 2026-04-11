@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/learn/bitcoin-is-sovereign`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bitcoin is Sovereign | Vote For Better Money",
+    description:
+      "Bitcoin is sovereign because it's a new system, independent from corrupt politicians and their broken promises.",
+  },
 };
 
 export default function BitcoinIsSovereignPage() {

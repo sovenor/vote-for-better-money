@@ -22,6 +22,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/learn`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Learn About Bitcoin | Vote For Better Money",
+    description:
+      "Learn why Bitcoin is better money. Explore how Bitcoin is American, sovereign, scarce, decentralized, and permissionless.",
+  },
 };
 
 const ICON_MAP: Record<string, React.ReactNode> = {

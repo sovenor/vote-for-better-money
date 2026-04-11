@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     url: `${SITE_URL}/how-to-use-bitcoin`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Use Bitcoin | Vote For Better Money",
+    description:
+      "Whether you buy or earn Bitcoin, it's important to take full control of it. Learn how to buy, earn, and self-custody your Bitcoin.",
+  },
 };
 
 export default async function HowToUseBitcoinPage() {
