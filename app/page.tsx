@@ -271,17 +271,20 @@ export default async function HomePage() {
 
       {/* CTA Cards */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-2 gap-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          Learn more about Bitcoin
+        </h2>
+        <div className="grid grid-cols-1 gap-4">
+          <TopicCard
+            title="How to Use Bitcoin"
+            description="Buy Bitcoin, earn Bitcoin, and take full control of your money."
+            href="/how-to-use-bitcoin"
+          />
           <TopicCard
             title="Bitcoin is Improving the World"
             description="See how Bitcoin is making a difference for people everywhere."
             href={EXTERNAL_LINKS.bitcoinRocks}
             external
-          />
-          <TopicCard
-            title="How to Use Bitcoin"
-            description="Buy Bitcoin, earn Bitcoin, and take full control of your money."
-            href="/how-to-use-bitcoin"
           />
         </div>
       </section>
