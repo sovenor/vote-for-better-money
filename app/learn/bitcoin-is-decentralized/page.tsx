@@ -135,9 +135,6 @@ export default function BitcoinIsDecentralizedPage() {
           control of any single entity.
         </p>
 
-        <p className="text-lg font-medium text-foreground">
-          Bitcoin is decentralized. Bitcoin is better money.
-        </p>
       </div>
 
       <ArticleNav currentSlug="bitcoin-is-decentralized" />

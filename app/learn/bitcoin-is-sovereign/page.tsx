@@ -87,30 +87,6 @@ export default function BitcoinIsSovereignPage() {
           more of it and cause inflation.
         </p>
 
-        <div className="my-8 grid grid-cols-1 gap-3">
-          <FreedomCard
-            icon={<UnlockIcon />}
-            title="Bitcoin is Permissionless"
-            description="Anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money."
-            href="/learn/bitcoin-is-permissionless"
-          />
-          <FreedomCard
-            icon={<DiamondIcon />}
-            title="Bitcoin is Scarce"
-            description="There will only ever be 21 million Bitcoin. No one can print more."
-            href="/learn/bitcoin-is-scarce"
-          />
-          <FreedomCard
-            icon={<StarIcon />}
-            title="Bitcoin is American"
-            description="Bitcoin upholds freedom and respects proof of work — core American values."
-            href="/learn/bitcoin-is-american"
-          />
-        </div>
-
-        <p className="text-lg font-medium text-foreground">
-          Bitcoin is sovereign. Bitcoin is better money.
-        </p>
       </div>
 
       <ArticleNav currentSlug="bitcoin-is-sovereign" />

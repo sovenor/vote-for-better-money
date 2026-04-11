@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import TopicCard from "@/components/TopicCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import TopicCard from "@/components/TopicCard";
+import FreedomCard, {
+  GlobeIcon,
+  UnlockIcon,
+  ShieldIcon,
+  StarIcon,
+  DiamondIcon,
+} from "@/components/FreedomCard";
 import { SITE_URL, LEARN_ARTICLES, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -16,6 +22,14 @@ export const metadata: Metadata = {
   },
 };
 
+const ICON_MAP: Record<string, React.ReactNode> = {
+  "bitcoin-is-american": <StarIcon />,
+  "bitcoin-is-sovereign": <ShieldIcon />,
+  "bitcoin-is-scarce": <DiamondIcon />,
+  "bitcoin-is-decentralized": <GlobeIcon />,
+  "bitcoin-is-permissionless": <UnlockIcon />,
+};
+
 export default function LearnPage() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
@@ -24,34 +38,41 @@ export default function LearnPage() {
       <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
         Learn About Bitcoin
       </h1>
-      <p className="text-lg sm:text-xl text-muted mb-10 leading-relaxed">
-        Bitcoin is better money. Here&apos;s why — explore these topics to
-        understand what makes Bitcoin different.
+      <p className="text-lg sm:text-xl text-muted mb-4 leading-relaxed">
+        Bitcoin is better money. That&apos;s because Bitcoin is...
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-4 mb-12">
+      <div className="grid grid-cols-2 gap-3 mb-12">
         {LEARN_ARTICLES.map((article) => (
-          <TopicCard
+          <FreedomCard
             key={article.slug}
-            title={article.title}
+            icon={ICON_MAP[article.slug] ?? <GlobeIcon />}
+            title={article.title.replace(/^Bitcoin is /, "")}
             description={article.description}
             href={article.href}
           />
         ))}
       </div>
 
-      <div className="flex flex-col items-center gap-4 pt-4">
-        <Link href="/how-to-use-bitcoin" className="btn-primary">
-          How to Use Bitcoin
-        </Link>
-        <a
+      <h2 className="text-2xl font-bold text-foreground mb-6">
+        Vote for Better Money
+      </h2>
+      <p className="mb-7 text-muted">
+        You don&apos;t need to wait for election day to vote for better money.
+        Bitcoin is better money — and you can start using it today.
+      </p>
+      <div className="grid grid-cols-1 gap-4">
+        <TopicCard
+          title="How to Use Bitcoin"
+          description="Buy Bitcoin, earn Bitcoin, and take full control of your money."
+          href="/how-to-use-bitcoin"
+        />
+        <TopicCard
+          title="Bitcoin is Improving the World"
+          description="See how Bitcoin is making a difference for people everywhere."
           href={EXTERNAL_LINKS.bitcoinRocks}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          bitcoin.rocks →
-        </a>
+          external
+        />
       </div>
     </div>
   );

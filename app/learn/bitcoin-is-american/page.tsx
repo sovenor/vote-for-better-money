@@ -131,9 +131,6 @@ export default function BitcoinIsAmericanPage() {
           />
         </div>
 
-        <p className="text-lg font-medium text-foreground">
-          Bitcoin is American. Bitcoin is better money.
-        </p>
       </div>
 
       <ArticleNav currentSlug="bitcoin-is-american" />

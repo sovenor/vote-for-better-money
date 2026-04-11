@@ -133,9 +133,6 @@ export default function BitcoinIsPermissionlessPage() {
           />
         </div>
 
-        <p className="text-lg font-medium text-foreground">
-          Bitcoin is permissionless. Bitcoin is better money.
-        </p>
       </div>
 
       <ArticleNav currentSlug="bitcoin-is-permissionless" />
