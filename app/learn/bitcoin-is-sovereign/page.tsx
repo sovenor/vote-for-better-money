@@ -3,7 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
 import StatCard from "@/components/StatCard";
-import TopicCard from "@/components/TopicCard";
+import FreedomCard, { UnlockIcon, DiamondIcon, StarIcon } from "@/components/FreedomCard";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -88,17 +88,20 @@ export default function BitcoinIsSovereignPage() {
         </p>
 
         <div className="my-8 grid grid-cols-1 gap-3">
-          <TopicCard
+          <FreedomCard
+            icon={<UnlockIcon />}
             title="Bitcoin is Permissionless"
             description="Anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money."
             href="/learn/bitcoin-is-permissionless"
           />
-          <TopicCard
+          <FreedomCard
+            icon={<DiamondIcon />}
             title="Bitcoin is Scarce"
             description="There will only ever be 21 million Bitcoin. No one can print more."
             href="/learn/bitcoin-is-scarce"
           />
-          <TopicCard
+          <FreedomCard
+            icon={<StarIcon />}
             title="Bitcoin is American"
             description="Bitcoin upholds freedom and respects proof of work — core American values."
             href="/learn/bitcoin-is-american"

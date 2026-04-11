@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
 import StatCard from "@/components/StatCard";
 import TopicCard from "@/components/TopicCard";
+import FreedomCard, { BankIcon, GlobeIcon } from "@/components/FreedomCard";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -98,13 +99,15 @@ export default function BitcoinIsPermissionlessPage() {
         </p>
 
         <div className="my-8 grid grid-cols-2 gap-3">
-          <TopicCard
+          <FreedomCard
+            icon={<BankIcon />}
             title="Debanking in America"
             description="Banks have cut off access to accounts for political and personal reasons."
             href={EXTERNAL_LINKS.debanking}
             external
           />
-          <TopicCard
+          <FreedomCard
+            icon={<BankIcon />}
             title="Canada Froze Accounts"
             description="Workers had their bank accounts frozen by their own government."
             href={EXTERNAL_LINKS.canadaTruckers}
@@ -122,7 +125,8 @@ export default function BitcoinIsPermissionlessPage() {
         </p>
 
         <div className="my-8 grid grid-cols-1 gap-3">
-          <TopicCard
+          <FreedomCard
+            icon={<GlobeIcon />}
             title="Bitcoin is Decentralized"
             description="No single entity — no government, no corporation — controls Bitcoin."
             href="/learn/bitcoin-is-decentralized"

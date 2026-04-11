@@ -4,7 +4,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
 import StatCard from "@/components/StatCard";
-import TopicCard from "@/components/TopicCard";
+import FreedomCard, { DiamondIcon, BoltIcon, LeafIcon } from "@/components/FreedomCard";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -77,7 +77,8 @@ export default function BitcoinIsAmericanPage() {
         </p>
 
         <div className="my-8 grid grid-cols-1 gap-3">
-          <TopicCard
+          <FreedomCard
+            icon={<DiamondIcon />}
             title="Bitcoin is Scarce"
             description="There will only ever be 21 million Bitcoin. No one can print more."
             href="/learn/bitcoin-is-scarce"
@@ -114,13 +115,15 @@ export default function BitcoinIsAmericanPage() {
         </p>
 
         <div className="my-8 grid grid-cols-2 gap-3">
-          <TopicCard
+          <FreedomCard
+            icon={<BoltIcon />}
             title="Texas"
             description="Bitcoin mining helped keep the lights on during a massive storm."
             href={EXTERNAL_LINKS.texasMining}
             external
           />
-          <TopicCard
+          <FreedomCard
+            icon={<LeafIcon />}
             title="Pennsylvania"
             description="Bitcoin mining cleaned up coal waste the government refused to."
             href={EXTERNAL_LINKS.pennsylvaniaMining}

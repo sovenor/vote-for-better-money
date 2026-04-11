@@ -184,6 +184,25 @@ export function ShieldIcon() {
   );
 }
 
+export function DiamondIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M6 3h12l4 6-10 13L2 9z" />
+      <path d="M2 9h20" />
+      <path d="M10 3l-4 6 6 13 6-13-4-6" />
+    </svg>
+  );
+}
+
 export function FistIcon() {
   return (
     <svg
