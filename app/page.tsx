@@ -53,23 +53,23 @@ export default async function HomePage() {
 
       {/* Dynamic Stats Bar */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 py-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-          <StatCard
-            label="National Debt"
-            value={`$${stats.nationalDebtTrillions}T`}
-            sublabel="And growing every day"
-          />
-          <StatCard
-            label="Bitcoin Supply"
-            value="21 Million"
-            sublabel="Fixed. Forever."
-            accent
-          />
-          <StatCard
-            label="Bitcoin Mined"
-            value={`${stats.bitcoinPercentMined}%`}
-            sublabel={`${stats.bitcoinMined} of 21M`}
-          />
+        <div className="grid grid-cols-2 gap-3">
+          {stats.btcChange4yr && (
+            <StatCard
+              label="Bitcoin"
+              value={`+${stats.btcChange4yr}%`}
+              sublabel="Last 4 years"
+              accent
+            />
+          )}
+          {stats.usdInflation4yr && (
+            <StatCard
+              label="US Dollar"
+              value={`-${stats.usdInflation4yr}%`}
+              sublabel="Purchasing power lost"
+              danger
+            />
+          )}
         </div>
       </section>
 
