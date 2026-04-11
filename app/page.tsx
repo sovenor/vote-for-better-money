@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TopicCard from "@/components/TopicCard";
 import StatCard from "@/components/StatCard";
+import FredComparisonCard from "@/components/FredComparisonCard";
 import { fetchStats } from "@/lib/api";
 import {
   SITE_NAME,
@@ -88,16 +89,14 @@ export default async function HomePage() {
               </a>
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden">
-            <a href={EXTERNAL_LINKS.fredM1} target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/img/guide-dollar-supply.png"
-                alt="Graph showing dramatic increase in US dollar supply over time"
-                width={500}
-                height={300}
-                className="w-full h-auto"
-              />
-            </a>
+          <div className="my-8">
+            <FredComparisonCard
+              title="M1 Money Supply (Dollars in Existence)"
+              baselineLabel="Jan 2020"
+              baselineValue={4.0}
+              currentValue={parseFloat(stats.m1SupplyTrillions)}
+              href={EXTERNAL_LINKS.fredM1}
+            />
           </div>
 
           <p>
@@ -113,16 +112,14 @@ export default async function HomePage() {
             to both Democrats and Republicans.
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden">
-            <a href={EXTERNAL_LINKS.fredDebt} target="_blank" rel="noopener noreferrer">
-              <Image
-                src="/img/guide-party-debt.png"
-                alt="Graph showing national debt increasing under both political parties"
-                width={500}
-                height={300}
-                className="w-full h-auto"
-              />
-            </a>
+          <div className="my-8">
+            <FredComparisonCard
+              title="Federal Debt: Total Public Debt"
+              baselineLabel="Q1 2020"
+              baselineValue={23.2}
+              currentValue={parseFloat(stats.nationalDebtTrillions)}
+              href={EXTERNAL_LINKS.fredDebt}
+            />
           </div>
 
           <p>More money printing means more inflation. And there&apos;s no sign of it stopping.</p>

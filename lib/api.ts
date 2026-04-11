@@ -1,5 +1,6 @@
 export interface SiteStats {
   nationalDebtTrillions: string;
+  m1SupplyTrillions: string;
   bitcoinMined: string;
   bitcoinPercentMined: string;
   btcPrice: string;
@@ -10,6 +11,7 @@ export interface SiteStats {
 
 const FALLBACK_STATS: SiteStats = {
   nationalDebtTrillions: "36",
+  m1SupplyTrillions: "18.4",
   bitcoinMined: "19.8 million",
   bitcoinPercentMined: "94",
   btcPrice: "",

@@ -142,8 +142,9 @@ export async function GET() {
   }
 
   // Fetch all data in parallel
-  const [debtRaw, btcMined, btcPrice, inflation] = await Promise.all([
+  const [debtRaw, m1Raw, btcMined, btcPrice, inflation] = await Promise.all([
     fetchFredSeries("GFDEBTN"), // National debt in millions
+    fetchFredSeries("M1SL"),    // M1 money supply in billions
     fetchBitcoinMined(),
     fetchBtcPrice(),
     fetchInflation(),
@@ -179,6 +180,14 @@ export async function GET() {
   } else {
     stats.btcPrice = "";
     stats.btcChange4yr = "";
+  }
+
+  // M1 Money Supply (FRED returns M1SL in billions of dollars)
+  if (m1Raw) {
+    const trillions = m1Raw / 1_000;
+    stats.m1SupplyTrillions = trillions.toFixed(1);
+  } else {
+    stats.m1SupplyTrillions = "18.4";
   }
 
   // USD inflation
