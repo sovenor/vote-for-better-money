@@ -3,6 +3,7 @@ interface StatCardProps {
   value: string;
   sublabel?: string;
   accent?: boolean;
+  success?: boolean;
   danger?: boolean;
 }
 
@@ -11,13 +12,16 @@ export default function StatCard({
   value,
   sublabel,
   accent = false,
+  success = false,
   danger = false,
 }: StatCardProps) {
   const valueColor = danger
     ? "text-danger"
-    : accent
-      ? "text-accent"
-      : "text-foreground";
+    : success
+      ? "text-success"
+      : accent
+        ? "text-accent"
+        : "text-foreground";
 
   return (
     <div className="p-5 rounded-xl bg-card border border-card-border text-center">

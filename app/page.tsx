@@ -58,7 +58,7 @@ export default async function HomePage() {
             label="Bitcoin"
             value={stats.btcChange4yr ? `+${stats.btcChange4yr}%` : "No data"}
             sublabel="Last 4 years"
-            accent
+            success
           />
           <StatCard
             label="US Dollar"
