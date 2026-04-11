@@ -99,6 +99,21 @@ export default function BitcoinIsSovereignPage() {
 
       <ArticleNav currentSlug="bitcoin-is-sovereign" />
 
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+              { "@type": "ListItem", position: 2, name: "Learn", item: `${SITE_URL}/learn` },
+              { "@type": "ListItem", position: 3, name: "Bitcoin is Sovereign" },
+            ],
+          }),
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
