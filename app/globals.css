@@ -63,7 +63,7 @@ html {
 }
 
 /* Article content styles */
-.article-content p {
+.article-content > p {
   margin-bottom: 1.5rem;
   line-height: 1.75;
 }

@@ -1,5 +1,6 @@
 interface FredComparisonCardProps {
   title: string;
+  source: string;
   baselineLabel: string;
   baselineValue: number;
   currentValue: number;
@@ -8,6 +9,7 @@ interface FredComparisonCardProps {
 
 export default function FredComparisonCard({
   title,
+  source,
   baselineLabel,
   baselineValue,
   currentValue,
@@ -27,20 +29,20 @@ export default function FredComparisonCard({
       className="block p-6 sm:p-8 rounded-xl bg-card border-2 border-accent/50 no-underline hover:border-accent hover:shadow-[0_0_20px_rgba(247,147,26,0.15)] transition-all group text-center"
     >
       {/* Title */}
-      <p className="text-xs sm:text-sm font-bold text-accent uppercase tracking-widest mb-6">
+      <p className="text-base sm:text-xl font-bold text-accent uppercase tracking-widest mb-6">
         {title}
       </p>
 
       {/* Baseline */}
-      <p className="text-xs uppercase tracking-wider text-muted mb-1">
+      <p className="text-xs uppercase tracking-wider text-muted mb-0.5">
         {baselineLabel}
       </p>
-      <p className="text-xl sm:text-2xl font-bold text-muted mb-4">
+      <p className="text-3xl sm:text-4xl font-bold text-muted mb-2">
         {formatTrillions(baselineValue)}
       </p>
 
       {/* Arrow Down */}
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-2">
         <svg
           className="w-6 h-6 text-accent animate-bounce"
           fill="none"
@@ -57,23 +59,23 @@ export default function FredComparisonCard({
       </div>
 
       {/* Current / Today */}
-      <p className="text-xs uppercase tracking-wider text-foreground font-medium mb-1">
+      <p className="text-xs uppercase tracking-wider text-foreground font-medium mb-0.5">
         Today
       </p>
-      <p className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+      <p className="text-3xl sm:text-4xl font-bold text-foreground mb-7">
         {formatTrillions(currentValue)}
       </p>
 
       {/* Divider + Result */}
-      <div className="border-t border-accent/30 pt-4 mb-2">
+      <div className="border-t border-accent/30 pt-3 mb-1">
         <p className="text-2xl sm:text-3xl font-bold text-danger">
           +{percentChange.toFixed(0)}% increase
         </p>
       </div>
 
       {/* Source */}
-      <p className="text-xs text-muted group-hover:text-accent transition-colors mt-3">
-        Source: FRED →
+      <p className="text-xs text-muted group-hover:text-accent transition-colors mt-2">
+        {source} →
       </p>
     </a>
   );

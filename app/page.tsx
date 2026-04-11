@@ -91,7 +91,8 @@ export default async function HomePage() {
 
           <div className="my-8">
             <FredComparisonCard
-              title="M1 Money Supply (Dollars in Existence)"
+              title="DOLLARS IN EXISTENCE"
+              source="Source: FRED M1 Money Supply"
               baselineLabel="Jan 2020"
               baselineValue={4.0}
               currentValue={parseFloat(stats.m1SupplyTrillions)}
@@ -114,7 +115,8 @@ export default async function HomePage() {
 
           <div className="my-8">
             <FredComparisonCard
-              title="Federal Debt: Total Public Debt"
+              title="TOTAL FEDERAL DEBT"
+              source="Source: FRED GFDEBTN"
               baselineLabel="Q1 2020"
               baselineValue={23.2}
               currentValue={parseFloat(stats.nationalDebtTrillions)}
