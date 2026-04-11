@@ -49,6 +49,9 @@ body {
   a:hover {
     color: var(--color-accent-hover);
   }
+  a.no-underline {
+    text-decoration: none;
+  }
 }
 
 /* Selection */

@@ -4,6 +4,15 @@ import Link from "next/link";
 import TopicCard from "@/components/TopicCard";
 import StatCard from "@/components/StatCard";
 import FredComparisonCard from "@/components/FredComparisonCard";
+import FreedomCard, {
+  GlobeIcon,
+  UnlockIcon,
+  StarIcon,
+  BoltIcon,
+  LeafIcon,
+  BankIcon,
+  FistIcon,
+} from "@/components/FreedomCard";
 import { fetchStats } from "@/lib/api";
 import {
   SITE_NAME,
@@ -185,62 +194,59 @@ export default async function HomePage() {
           </h2>
 
           <p>
-            The Bitcoin network isn&apos;t owned by anyone.{" "}
-            <Link href="/learn/bitcoin-is-decentralized">
-              Bitcoin is decentralized
-            </Link>{" "}
-            — it isn&apos;t controlled by any government or corporation.
+            The Bitcoin network isn&apos;t owned by anyone. It isn&apos;t controlled
+            by any government or corporation. And people around the world are
+            already using it to protect their freedom.
           </p>
 
-          <p>
-            <Link href="/learn/bitcoin-is-permissionless">
-              Bitcoin is permissionless
-            </Link>{" "}
-            — anyone, anywhere can join the network. No one can stop you from
-            accessing your money.
-          </p>
-
-          <p>
-            <Link href="/learn/bitcoin-is-american">Bitcoin is American</Link>{" "}
-            — it upholds freedom and respects proof of work.
-          </p>
-
-          <div className="my-8 rounded-xl overflow-hidden">
-            <Image
-              src="/img/guide-flag.png"
-              alt="American flag representing Bitcoin's alignment with American values"
-              width={500}
-              height={300}
-              className="w-full h-auto"
+          <div className="my-8 grid sm:grid-cols-2 gap-3">
+            <FreedomCard
+              icon={<GlobeIcon />}
+              title="Decentralized"
+              description="No single entity — no government, no corporation — controls Bitcoin."
+              href="/learn/bitcoin-is-decentralized"
+            />
+            <FreedomCard
+              icon={<UnlockIcon />}
+              title="Permissionless"
+              description="Anyone, anywhere can join the network. No one can stop you."
+              href="/learn/bitcoin-is-permissionless"
+            />
+            <FreedomCard
+              icon={<StarIcon />}
+              title="American"
+              description="Upholds freedom and respects proof of work — core American values."
+              href="/learn/bitcoin-is-american"
+            />
+            <FreedomCard
+              icon={<BoltIcon />}
+              title="Texas"
+              description="Bitcoin mining helped keep the lights on during a massive storm."
+              href={EXTERNAL_LINKS.texasMining}
+              external
+            />
+            <FreedomCard
+              icon={<LeafIcon />}
+              title="Pennsylvania"
+              description="Bitcoin mining cleaned up coal waste the government refused to."
+              href={EXTERNAL_LINKS.pennsylvaniaMining}
+              external
+            />
+            <FreedomCard
+              icon={<BankIcon />}
+              title="Canada"
+              description="Workers used Bitcoin to access money after their accounts were frozen."
+              href={EXTERNAL_LINKS.canadaTruckers}
+              external
+            />
+            <FreedomCard
+              icon={<FistIcon />}
+              title="Nigeria"
+              description="Protesters used Bitcoin to fund their movement after banks cut them off."
+              href={EXTERNAL_LINKS.nigeriaEndSars}
+              external
             />
           </div>
-
-          <p>
-              Americans in Texas used Bitcoin to help <a href={EXTERNAL_LINKS.texasMining} target="_blank" rel="noopener noreferrer">keep their lights on,
-            </a>{" "}
-            even during a massive storm.
-          </p>
-
-          <p>
-            Americans in Pennsylvania used Bitcoin to <a href={EXTERNAL_LINKS.pennsylvaniaMining} target="_blank" rel="noopener noreferrer">
-              clean up coal waste,
-            </a>{" "}
-            even after their own government refused to.
-          </p>
-
-          <p>
-            Workers in Canada used Bitcoin to <a href={EXTERNAL_LINKS.canadaTruckers} target="_blank" rel="noopener noreferrer">
-              access their money,
-            </a>{" "}
-            even after their own government froze their bank accounts.
-          </p>
-
-          <p>
-            Nigerians used Bitcoin to <a href={EXTERNAL_LINKS.nigeriaEndSars} target="_blank" rel="noopener noreferrer">
-              fight for their rights,
-            </a>{" "}
-            even after their banks stopped processing donations.
-          </p>
 
           <p className="text-lg font-medium text-foreground">
             You don&apos;t need to wait for election day to vote for better money.
