@@ -74,7 +74,7 @@ export default function FredComparisonCard({
       </div>
 
       {/* Source */}
-      <p className="text-xs text-muted group-hover:text-accent transition-colors mt-2">
+      <p className="text-xs text-muted group-hover:text-accent group-hover:translate-x-1 transition-all mt-2">
         {source} →
       </p>
     </a>

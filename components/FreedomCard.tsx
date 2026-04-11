@@ -26,8 +26,8 @@ export default function FreedomCard({
       <p className="text-xs sm:text-sm text-muted mt-2 leading-relaxed flex-1">
         {description}
       </p>
-      <p className="text-xs text-accent mt-3 font-medium">
-        Learn more &rsaquo;
+      <p className="text-xs text-accent mt-3 font-medium inline-block group-hover:translate-x-1 transition-transform">
+        Learn more →
       </p>
     </div>
   );
