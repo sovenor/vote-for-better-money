@@ -124,7 +124,7 @@ export default async function HomePage() {
             />
           </div>
 
-          <p>More money printing means more inflation. And there&apos;s no sign of it stopping.</p>
+          <p>More federal debt means more money printing. More money printing means more inflation. And there&apos;s no sign of it stopping.</p>
         </div>
       </section>
 
@@ -136,7 +136,7 @@ export default async function HomePage() {
           </h2>
 
           <p>
-            Inflation is when your money buys you less over time. Bitcoin is better
+            Inflation means your money buys you less over time. Bitcoin is better
             money because it doesn&apos;t have inflation.
           </p>
 
@@ -145,7 +145,7 @@ export default async function HomePage() {
             any time.{" "}
             <Link href="/learn/bitcoin-is-scarce">Bitcoin is scarce</Link>{" "}
             because it has a maximum supply of 21 million Bitcoin. No one can
-            print more.
+            print more Bitcoin.
           </p>
 
           <div className="my-8 rounded-xl overflow-hidden">
