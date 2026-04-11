@@ -7,9 +7,9 @@ export default function NotFound() {
       <Image
         src="/img/logo-dark-mode-v3.png"
         alt="Vote For Better Money"
-        width={80}
-        height={80}
-        className="mx-auto mb-8 opacity-60"
+        width={290}
+        height={209}
+        className="w-20 h-auto mx-auto mb-8"
       />
       <h1 className="text-3xl font-bold text-foreground mb-4">
         Page Not Found
