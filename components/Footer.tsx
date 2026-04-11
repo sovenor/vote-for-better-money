@@ -11,8 +11,9 @@ export default function Footer() {
             <Image
               src="/img/logo-dark-mode-v2.png"
               alt="Vote For Better Money"
-              width={60}
-              height={60}
+              width={290}
+              height={209}
+              quality={100}
               className="w-15 h-15"
             />
           </Link>

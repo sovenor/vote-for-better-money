@@ -19,8 +19,9 @@ export default function Navbar() {
             <Image
               src="/img/logo-dark-mode-v2.png"
               alt="Vote For Better Money"
-              width={40}
-              height={40}
+              width={290}
+              height={209}
+              quality={100}
               className="w-10 h-10"
               priority
             />
