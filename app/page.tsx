@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: `${SITE_NAME} — Bitcoin is Better Money`,
+    description:
+      "Our money is broken. Prices keep going up. Bitcoin is better money — and you can vote for better money by using Bitcoin today.",
     url: SITE_URL,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

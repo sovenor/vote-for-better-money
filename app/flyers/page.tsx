@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/flyers` },
   openGraph: {
     title: "Vote For Better Money Flyers",
+    description:
+      "Help spread the word about better money. Print Vote For Better Money flyers and put them up in public places.",
     url: `${SITE_URL}/flyers`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

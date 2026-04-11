@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/learn/bitcoin-is-american` },
   openGraph: {
     title: "Bitcoin is American | Vote For Better Money",
+    description:
+      "Bitcoin is American because it upholds freedom and respects proof of work — core American values that align with financial independence.",
     url: `${SITE_URL}/learn/bitcoin-is-american`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

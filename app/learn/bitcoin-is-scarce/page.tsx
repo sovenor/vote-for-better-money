@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/learn/bitcoin-is-scarce` },
   openGraph: {
     title: "Bitcoin is Scarce | Vote For Better Money",
+    description:
+      "Bitcoin is scarce because it has a maximum supply of 21 million Bitcoin. Unlike dollars, no one can print more Bitcoin.",
     url: `${SITE_URL}/learn/bitcoin-is-scarce`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

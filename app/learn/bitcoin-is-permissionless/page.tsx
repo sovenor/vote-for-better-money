@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/learn/bitcoin-is-permissionless` },
   openGraph: {
     title: "Bitcoin is Permissionless | Vote For Better Money",
+    description:
+      "Bitcoin is permissionless because anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money.",
     url: `${SITE_URL}/learn/bitcoin-is-permissionless`,
     images: [
       { url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 },

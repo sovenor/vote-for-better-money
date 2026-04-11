@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/how-to-use-bitcoin` },
   openGraph: {
     title: "How to Use Bitcoin | Vote For Better Money",
+    description:
+      "Whether you buy or earn Bitcoin, it's important to take full control of it. Learn how to buy, earn, and self-custody your Bitcoin.",
     url: `${SITE_URL}/how-to-use-bitcoin`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

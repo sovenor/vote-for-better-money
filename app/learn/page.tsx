@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/learn` },
   openGraph: {
     title: "Learn About Bitcoin | Vote For Better Money",
+    description:
+      "Learn why Bitcoin is better money. Explore how Bitcoin is American, sovereign, scarce, decentralized, and permissionless.",
     url: `${SITE_URL}/learn`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },

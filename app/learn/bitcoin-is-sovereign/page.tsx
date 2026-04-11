@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/learn/bitcoin-is-sovereign` },
   openGraph: {
     title: "Bitcoin is Sovereign | Vote For Better Money",
+    description:
+      "Bitcoin is sovereign because it's a new system, independent from corrupt politicians and their broken promises.",
     url: `${SITE_URL}/learn/bitcoin-is-sovereign`,
     images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
