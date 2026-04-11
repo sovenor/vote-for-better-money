@@ -43,15 +43,23 @@ export default function LearnPage() {
       </p>
 
       <div className="grid grid-cols-2 gap-3 mb-12">
-        {LEARN_ARTICLES.map((article) => (
-          <FreedomCard
-            key={article.slug}
-            icon={ICON_MAP[article.slug] ?? <GlobeIcon />}
-            title={article.title.replace(/^Bitcoin is /, "")}
-            description={article.description}
-            href={article.href}
-          />
-        ))}
+        {LEARN_ARTICLES.map((article, index) => {
+          const isLast = index === LEARN_ARTICLES.length - 1 && LEARN_ARTICLES.length % 2 !== 0;
+          const card = (
+            <FreedomCard
+              key={article.slug}
+              icon={ICON_MAP[article.slug] ?? <GlobeIcon />}
+              title={article.title.replace(/^Bitcoin is /, "")}
+              description={article.description}
+              href={article.href}
+            />
+          );
+          return isLast ? (
+            <div key={article.slug} className="col-span-2">
+              {card}
+            </div>
+          ) : card;
+        })}
       </div>
 
       <h2 className="text-2xl font-bold text-foreground mb-6">

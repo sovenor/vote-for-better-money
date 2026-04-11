@@ -9,6 +9,7 @@ import FreedomCard, {
   UnlockIcon,
   ShieldIcon,
   StarIcon,
+  DiamondIcon,
   BoltIcon,
   LeafIcon,
   BankIcon,
@@ -223,6 +224,14 @@ export default async function HomePage() {
               description="Upholds freedom and respects proof of work — core American values."
               href="/learn/bitcoin-is-american"
             />
+            <div className="col-span-2">
+              <FreedomCard
+                icon={<DiamondIcon />}
+                title="Scarce"
+                description="There will only ever be 21 million Bitcoin. No one can print more."
+                href="/learn/bitcoin-is-scarce"
+              />
+            </div>
           </div>
 
           <p>
