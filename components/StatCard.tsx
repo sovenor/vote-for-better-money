@@ -1,6 +1,7 @@
 interface StatCardProps {
   label: string;
   value: string;
+  detail?: string;
   sublabel?: string;
   accent?: boolean;
   success?: boolean;
@@ -10,6 +11,7 @@ interface StatCardProps {
 export default function StatCard({
   label,
   value,
+  detail,
   sublabel,
   accent = false,
   success = false,
@@ -29,6 +31,9 @@ export default function StatCard({
       <p className={`text-2xl sm:text-3xl font-bold mb-1 ${valueColor}`}>
         {value}
       </p>
+      {detail && (
+        <p className={`text-[10px] sm:text-xs mb-1 ${valueColor}`}>{detail}</p>
+      )}
       {sublabel && (
         <p className="text-xs text-muted">{sublabel}</p>
       )}

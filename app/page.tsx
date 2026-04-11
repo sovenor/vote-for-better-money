@@ -148,13 +148,20 @@ export default async function HomePage() {
             print more Bitcoin.
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden">
-            <Image
-              src="/img/guide-supply.png"
-              alt="Comparison of dollar unlimited supply vs Bitcoin fixed 21 million supply"
-              width={500}
-              height={300}
-              className="w-full h-auto"
+          <div className="my-8 grid grid-cols-2 gap-3">
+            <StatCard
+              label="Bitcoin"
+              value="21 Million"
+              detail="(21,000,000)"
+              sublabel="Fixed forever"
+              success
+            />
+            <StatCard
+              label="US Dollar"
+              value={`${stats.m1SupplyTrillions} Trillion`}
+              detail={`(${(parseFloat(stats.m1SupplyTrillions) * 1_000_000_000_000).toLocaleString("en-US", { maximumFractionDigits: 0 })})`}
+              sublabel="And counting..."
+              danger
             />
           </div>
 
