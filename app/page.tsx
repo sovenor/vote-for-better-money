@@ -7,6 +7,7 @@ import FredComparisonCard from "@/components/FredComparisonCard";
 import FreedomCard, {
   GlobeIcon,
   UnlockIcon,
+  ShieldIcon,
   StarIcon,
   BoltIcon,
   LeafIcon,
@@ -17,7 +18,6 @@ import { fetchStats } from "@/lib/api";
 import {
   SITE_NAME,
   SITE_URL,
-  LEARN_ARTICLES,
   EXTERNAL_LINKS,
 } from "@/lib/constants";
 
@@ -199,7 +199,7 @@ export default async function HomePage() {
             already using it to protect their freedom.
           </p>
 
-          <div className="my-8 grid sm:grid-cols-2 gap-3">
+          <div className="my-8 grid grid-cols-2 gap-3">
             <FreedomCard
               icon={<GlobeIcon />}
               title="Decentralized"
@@ -213,11 +213,25 @@ export default async function HomePage() {
               href="/learn/bitcoin-is-permissionless"
             />
             <FreedomCard
+              icon={<ShieldIcon />}
+              title="Sovereign"
+              description="A new system, independent from politicians and their broken promises."
+              href="/learn/bitcoin-is-sovereign"
+            />
+            <FreedomCard
               icon={<StarIcon />}
               title="American"
               description="Upholds freedom and respects proof of work — core American values."
               href="/learn/bitcoin-is-american"
             />
+          </div>
+
+          <p>
+            People around the world are already using Bitcoin to protect their
+            freedom — even when their own governments tried to stop them.
+          </p>
+
+          <div className="my-8 grid grid-cols-2 gap-3">
             <FreedomCard
               icon={<BoltIcon />}
               title="Texas"
@@ -255,20 +269,15 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Topic Cards Grid */}
+      {/* CTA Cards */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 py-12">
-        <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
-          Learn More About Bitcoin
-        </h2>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {LEARN_ARTICLES.map((article) => (
-            <TopicCard
-              key={article.slug}
-              title={article.title}
-              description={article.description}
-              href={article.href}
-            />
-          ))}
+        <div className="grid grid-cols-2 gap-4">
+          <TopicCard
+            title="Bitcoin is Improving the World"
+            description="See how Bitcoin is making a difference for people everywhere."
+            href={EXTERNAL_LINKS.bitcoinRocks}
+            external
+          />
           <TopicCard
             title="How to Use Bitcoin"
             description="Buy Bitcoin, earn Bitcoin, and take full control of your money."

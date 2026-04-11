@@ -16,16 +16,21 @@ export default function FreedomCard({
   external = false,
 }: FreedomCardProps) {
   const content = (
-    <div className="p-4 rounded-xl bg-card border border-card-border hover:border-accent/40 transition-colors group cursor-pointer flex items-start gap-3">
-      <div className="text-accent shrink-0 mt-0.5">{icon}</div>
-      <div>
-        <p className="font-bold text-foreground group-hover:text-accent transition-colors text-sm sm:text-base leading-snug">
-          {title}
-        </p>
-        <p className="text-xs sm:text-sm text-muted mt-1 leading-relaxed">
-          {description}
-        </p>
+    <div className="p-4 rounded-xl bg-card border border-card-border hover:border-accent/40 transition-colors group cursor-pointer flex flex-col h-full">
+      <div className="flex items-start gap-3 flex-1">
+        <div className="text-accent shrink-0 mt-0.5">{icon}</div>
+        <div>
+          <p className="font-bold text-foreground group-hover:text-accent transition-colors text-sm sm:text-base leading-snug">
+            {title}
+          </p>
+          <p className="text-xs sm:text-sm text-muted mt-1 leading-relaxed">
+            {description}
+          </p>
+        </div>
       </div>
+      <p className="text-xs text-accent mt-3 font-medium">
+        Learn more &rsaquo;
+      </p>
     </div>
   );
 
@@ -160,6 +165,23 @@ export function BankIcon() {
       <path d="M10 10v8" />
       <path d="M14 10v8" />
       <path d="M18 10v8" />
+    </svg>
+  );
+}
+
+export function ShieldIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
   );
 }
