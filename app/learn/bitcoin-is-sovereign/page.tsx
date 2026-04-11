@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
+import StatCard from "@/components/StatCard";
+import TopicCard from "@/components/TopicCard";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -32,52 +34,76 @@ export default function BitcoinIsSovereignPage() {
 
       <div className="article-content">
         <p className="text-lg sm:text-xl text-muted leading-relaxed">
-          <strong className="text-foreground">Bitcoin is sovereign</strong> because
+          <strong className="text-foreground">Bitcoin is sovereign</strong>&nbsp;because
           it&apos;s a new system, independent from corrupt politicians.
         </p>
+
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Politicians"
+            value="Promises"
+            sublabel="Rarely kept after election day"
+            danger
+          />
+          <StatCard
+            label="Bitcoin"
+            value="Proof"
+            sublabel="Works today, no promises needed"
+            success
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">The Problem</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          A Broken System
+        </h2>
 
         <p>
           Every election cycle, we vote for someone who says they&apos;ll make things
           better. They promise to fix big problems like corruption, schools, and
-          inflation.
+          inflation. But even after they win, things don&apos;t really change.
         </p>
-
-        <p>But even after they win, things don&apos;t really change.</p>
 
         <p>
           Instead of trying to change things from within a broken system, Bitcoin
-          has built a new system.
+          has built a new system — one that isn&apos;t controlled by politicians and
+          works today, without empty campaign promises or requests for donations.
         </p>
 
-        <p>
-          Bitcoin has built a system that isn&apos;t controlled by politicians. Bitcoin
-          has built a system that is{" "}
-          <Link href="/learn/bitcoin-is-permissionless">open to everyone.</Link>
-        </p>
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">The Solution</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          A New System Built on Freedom
+        </h2>
 
         <p>
-          Bitcoin has built a system with{" "}
-          <Link href="/learn/bitcoin-is-american">core American values</Link> like
-          freedom and respect for hard work.
+          Bitcoin gives you the freedom to save and spend your money without
+          restrictions. And it restricts politicians from being able to print
+          more of it and cause inflation.
         </p>
 
-        <p>
-          Bitcoin gives you the freedom to save your money{" "}
-          <Link href="/learn/bitcoin-is-permissionless">without restrictions.</Link>{" "}
-          It gives you the freedom to spend your money without restrictions.
-        </p>
-
-        <p>
-          And Bitcoin restricts politicians from being able to print more of it.{" "}
-          <Link href="/learn/bitcoin-is-scarce">
-            No one can print more Bitcoin and cause inflation.
-          </Link>
-        </p>
-
-        <p>
-          Bitcoin works today, without empty campaign promises or requests for
-          donations.
-        </p>
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="Bitcoin is Permissionless"
+            description="Anyone, anywhere can join the Bitcoin network. No one can stop you from accessing your money."
+            href="/learn/bitcoin-is-permissionless"
+          />
+          <TopicCard
+            title="Bitcoin is Scarce"
+            description="There will only ever be 21 million Bitcoin. No one can print more."
+            href="/learn/bitcoin-is-scarce"
+          />
+          <TopicCard
+            title="Bitcoin is American"
+            description="Bitcoin upholds freedom and respects proof of work — core American values."
+            href="/learn/bitcoin-is-american"
+          />
+        </div>
 
         <p className="text-lg font-medium text-foreground">
           Bitcoin is sovereign. Bitcoin is better money.
