@@ -17,17 +17,15 @@ export default function FreedomCard({
 }: FreedomCardProps) {
   const content = (
     <div className="p-4 rounded-xl bg-card border border-card-border hover:border-accent/40 transition-colors group cursor-pointer flex flex-col h-full">
-      <div className="flex items-start gap-3 flex-1">
-        <div className="text-accent shrink-0 mt-0.5">{icon}</div>
-        <div>
-          <p className="font-bold text-foreground group-hover:text-accent transition-colors text-sm sm:text-base leading-snug">
-            {title}
-          </p>
-          <p className="text-xs sm:text-sm text-muted mt-1 leading-relaxed">
-            {description}
-          </p>
-        </div>
+      <div className="flex items-center gap-2">
+        <div className="text-accent shrink-0">{icon}</div>
+        <p className="font-bold text-foreground group-hover:text-accent transition-colors text-sm sm:text-base leading-snug">
+          {title}
+        </p>
       </div>
+      <p className="text-xs sm:text-sm text-muted mt-2 leading-relaxed flex-1">
+        {description}
+      </p>
       <p className="text-xs text-accent mt-3 font-medium">
         Learn more &rsaquo;
       </p>
