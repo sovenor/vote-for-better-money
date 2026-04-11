@@ -4,19 +4,23 @@ import { CONTACT_EMAIL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-card-border mt-10">
+    <footer className="mt-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <div className="flex flex-col items-center text-center gap-6">
-          <Link href="/" className="no-underline">
-            <Image
-              src="/img/logo-dark-mode-v3.png"
-              alt="Vote For Better Money"
-              width={290}
-              height={209}
-              quality={100}
-              className="w-15 h-auto"
-            />
-          </Link>
+          <div className="flex items-center gap-4 w-full">
+            <div className="flex-1 h-px bg-card-border" />
+            <Link href="/" className="no-underline shrink-0">
+              <Image
+                src="/img/logo-dark-mode-v3.png"
+                alt="Vote For Better Money"
+                width={290}
+                height={209}
+                quality={100}
+                className="w-15 h-auto"
+              />
+            </Link>
+            <div className="flex-1 h-px bg-card-border" />
+          </div>
 
           <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
             <Link href="/" className="text-muted hover:text-accent no-underline">
