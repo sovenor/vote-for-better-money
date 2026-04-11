@@ -14,7 +14,7 @@ export default function Footer() {
               width={290}
               height={209}
               quality={100}
-              className="w-15 h-15"
+              className="w-15 h-auto"
             />
           </Link>
 
