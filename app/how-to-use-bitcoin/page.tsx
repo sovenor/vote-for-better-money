@@ -26,14 +26,14 @@ export default function HowToUseBitcoinPage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           Whether you buy Bitcoin or earn Bitcoin, it&apos;s important to take full
           control of it. Taking full control of your Bitcoin transforms it into{" "}
           <Link href="/learn/bitcoin-is-permissionless">freedom money.</Link>
         </p>
 
         <p>
-          If you can download an app, you can get Bitcoin for the first time and
+           If you can download an app, you can get Bitcoin for the first time and
           take full control of it.
         </p>
 
@@ -48,7 +48,7 @@ export default function HowToUseBitcoinPage() {
           />
         </div>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Buy Bitcoin
         </h2>
 
@@ -87,7 +87,7 @@ export default function HowToUseBitcoinPage() {
           />
         </div>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Take Full Control
         </h2>
 
@@ -146,7 +146,7 @@ export default function HowToUseBitcoinPage() {
           />
         </div>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Earn Bitcoin
         </h2>
 

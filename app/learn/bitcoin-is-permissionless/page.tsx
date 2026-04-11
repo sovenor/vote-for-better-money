@@ -33,7 +33,7 @@ export default function BitcoinIsPermissionlessPage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">Bitcoin is permissionless</strong>{" "}
           because anyone, anywhere can join the Bitcoin network. No one can stop
           you from accessing your money.

@@ -35,7 +35,7 @@ export default async function BitcoinIsScarcePage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">Bitcoin is scarce</strong> because it
           has a maximum supply of 21 million Bitcoin. Unlike dollars, no one can
           print more Bitcoin.
@@ -56,7 +56,7 @@ export default async function BitcoinIsScarcePage() {
           />
         </div>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Capped Supply
         </h2>
 
@@ -71,7 +71,7 @@ export default async function BitcoinIsScarcePage() {
           increase the value of an asset over time.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           How it Works
         </h2>
 
@@ -87,7 +87,7 @@ export default async function BitcoinIsScarcePage() {
           because no one can cause inflation in the Bitcoin system.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Halving Events
         </h2>
 
@@ -104,7 +104,7 @@ export default async function BitcoinIsScarcePage() {
           all 21 million Bitcoin are mined the system will continue to function.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           The Role of the Blockchain
         </h2>
 

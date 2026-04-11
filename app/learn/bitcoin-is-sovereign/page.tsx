@@ -31,7 +31,7 @@ export default function BitcoinIsSovereignPage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">Bitcoin is sovereign</strong> because
           it&apos;s a new system, independent from corrupt politicians.
         </p>

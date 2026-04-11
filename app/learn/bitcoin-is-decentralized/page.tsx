@@ -31,13 +31,13 @@ export default function BitcoinIsDecentralizedPage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">Bitcoin is decentralized</strong>{" "}
           because it isn&apos;t controlled by any single entity like a government or
           corporation.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Network of Nodes
         </h2>
 
@@ -56,7 +56,7 @@ export default function BitcoinIsDecentralizedPage() {
           followed.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Mining for Security
         </h2>
 
@@ -80,7 +80,7 @@ export default function BitcoinIsDecentralizedPage() {
           transactions.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Free and Open Source
         </h2>
 
@@ -93,7 +93,7 @@ export default function BitcoinIsDecentralizedPage() {
           changes can be made.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Unchangeable Record
         </h2>
 

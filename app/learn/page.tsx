@@ -21,10 +21,10 @@ export default function LearnPage() {
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
       <Breadcrumbs items={[{ label: "Learn" }]} />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
         Learn About Bitcoin
       </h1>
-      <p className="text-lg text-muted mb-10 leading-relaxed">
+      <p className="text-lg sm:text-xl text-muted mb-10 leading-relaxed">
         Bitcoin is better money. Here&apos;s why — explore these topics to
         understand what makes Bitcoin different.
       </p>

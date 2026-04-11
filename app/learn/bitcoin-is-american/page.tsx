@@ -32,12 +32,12 @@ export default function BitcoinIsAmericanPage() {
       </h1>
 
       <div className="article-content">
-        <p className="text-lg text-muted leading-relaxed">
+        <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">Bitcoin is American</strong> because
           it upholds freedom and respects proof of work.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">Freedom</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6">Freedom</h2>
 
         <p>
           America is all about being free and making your own choices. But lately,
@@ -55,7 +55,7 @@ export default function BitcoinIsAmericanPage() {
           government making it worth less.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Proof of Work
         </h2>
 
@@ -79,7 +79,7 @@ export default function BitcoinIsAmericanPage() {
           </Link>
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Fighting Inflation
         </h2>
 
@@ -96,7 +96,7 @@ export default function BitcoinIsAmericanPage() {
           This helps keep your hard-earned money valuable.
         </p>
 
-        <h2 className="text-xl font-bold text-foreground mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           Bringing Back American Values
         </h2>
 
