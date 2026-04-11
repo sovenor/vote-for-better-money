@@ -18,16 +18,13 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 no-underline shrink-0">
             <Image
               src="/img/logo-dark-mode-v2.png"
-              alt="Vote For Better Money"
+              alt="Vote for Better Money logo"
               width={290}
               height={209}
               quality={100}
               className="w-10 h-10"
               priority
             />
-            <span className="hidden sm:inline text-sm font-bold text-foreground tracking-wide uppercase">
-              Vote For Better Money
-            </span>
           </Link>
 
           {/* Desktop nav */}

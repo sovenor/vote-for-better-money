@@ -33,13 +33,12 @@ export default async function HomePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
           <Image
             src="/img/logo-dark-mode-v2.png"
-            alt=""
+            alt="Vote for Better Money logo"
             width={180}
             height={130}
             className="mx-auto mb-4"
             priority
           />
-          Vote For Better Money
         </h1>
         <p className="text-lg sm:text-xl text-muted leading-relaxed max-w-xl mx-auto">
           Election after election, politicians promise to fix America. But after
