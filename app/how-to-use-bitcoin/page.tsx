@@ -33,23 +33,13 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         <p>
+          Freedom money is money that can't be censored, frozen, or seized.
            If you can download an app, you can get Bitcoin for the first time and
           take full control of it.
         </p>
 
-        {/* Buy Bitcoin */}
-        <div className="my-8 rounded-xl overflow-hidden">
-          <Image
-            src="/img/use-buy-bitcoin.png"
-            alt="How to buy Bitcoin"
-            width={500}
-            height={300}
-            className="w-full h-auto"
-          />
-        </div>
-
-        <h2 className="text-2xl font-bold text-foreground mb-6">
-          Buy Bitcoin
+        {/* Buy Bitcoin */}<h2 className="text-2xl font-bold text-foreground mb-6">
+          How to Buy Bitcoin
         </h2>
 
         <p>
@@ -65,28 +55,11 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         <p>
-          You can also buy Bitcoin from exchanges like{" "}
-          <a href={EXTERNAL_LINKS.river} target="_blank" rel="noopener noreferrer">
-            River.
-          </a>
-        </p>
-
-        <p>
           After you get some Bitcoin, it&apos;s important that you take full control
           of it. Here&apos;s how:
         </p>
 
         {/* Take Full Control */}
-        <div className="my-8 rounded-xl overflow-hidden">
-          <Image
-            src="/img/use-take-full-control.png"
-            alt="Take full control of your Bitcoin"
-            width={500}
-            height={300}
-            className="w-full h-auto"
-          />
-        </div>
-
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Take Full Control
         </h2>
@@ -136,16 +109,6 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         {/* Earn Bitcoin */}
-        <div className="my-8 rounded-xl overflow-hidden">
-          <Image
-            src="/img/use-earn-bitcoin.png"
-            alt="How to earn Bitcoin"
-            width={500}
-            height={300}
-            className="w-full h-auto"
-          />
-        </div>
-
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Earn Bitcoin
         </h2>
