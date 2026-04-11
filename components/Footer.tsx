@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT_EMAIL, SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
+import { CONTACT_EMAIL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -56,22 +56,17 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-4 text-xs text-muted/60">
+          <p className="text-sm text-muted">
+            Built with 🧡 by{" "}
             <a
               href={EXTERNAL_LINKS.bitcoinRocks}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-accent no-underline"
+              className="text-muted hover:text-accent no-underline"
             >
               bitcoin.rocks
             </a>
-            <span>•</span>
-            <span>
-              <a href={SITE_URL} className="hover:text-accent no-underline">
-                voteforbetter.money
-              </a>
-            </span>
-          </div>
+          </p>
         </div>
       </div>
     </footer>
