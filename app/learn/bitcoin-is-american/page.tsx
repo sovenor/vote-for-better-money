@@ -65,8 +65,7 @@ export default function BitcoinIsAmericanPage() {
         <p>
           America is all about being free and making your own choices. But when
           banks and the government print more money, it makes the money we have
-          worth less. That&apos;s called{" "}
-          <Link href="/">inflation</Link>, and it&apos;s a big problem.
+          worth less. That&apos;s called inflation, and it&apos;s a big problem.
         </p>
 
         <p>
@@ -125,7 +124,7 @@ export default function BitcoinIsAmericanPage() {
           <FreedomCard
             icon={<LeafIcon />}
             title="Pennsylvania"
-            description="Bitcoin mining cleaned up coal waste the government refused to."
+            description="Bitcoin mining cleaned up coal waste the government refused to handle."
             href={EXTERNAL_LINKS.pennsylvaniaMining}
             external
           />

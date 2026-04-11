@@ -97,9 +97,7 @@ export default async function HomePage() {
 
           <p>
             This unlimited supply is the root cause of inflation. Over recent
-            years, the total amount of dollars in existence has {" "}
-              <a href={EXTERNAL_LINKS.fredM1} target="_blank" rel="noopener noreferrer">increased dramatically.
-              </a>
+            years, the total amount of dollars in existence has increased dramatically.
           </p>
 
           <div className="my-8">
@@ -180,7 +178,7 @@ export default async function HomePage() {
 
           <p>
             Historically, Bitcoin has gained purchasing power over time while the
-            dollar has lost it. Many people use Bitcoin as their long-term savings.
+            dollar has lost it. Many people use Bitcoin as their long-term savings account: money that they can leave alone and let grow for several years.
           </p>
 
           <p>
@@ -253,14 +251,14 @@ export default async function HomePage() {
             <FreedomCard
               icon={<LeafIcon />}
               title="Pennsylvania"
-              description="Bitcoin mining cleaned up coal waste the government refused to."
+              description="Bitcoin mining cleaned up coal waste the government refused to handle."
               href={EXTERNAL_LINKS.pennsylvaniaMining}
               external
             />
             <FreedomCard
               icon={<BankIcon />}
               title="Canada"
-              description="Workers used Bitcoin to access money after their accounts were frozen."
+              description="Workers used Bitcoin to access money after their bank accounts were frozen."
               href={EXTERNAL_LINKS.canadaTruckers}
               external
             />

@@ -68,8 +68,8 @@ export default async function BitcoinIsScarcePage() {
         <p>
           The 21 million cap was set by Bitcoin&apos;s creator, Satoshi Nakamoto.
           This limit was chosen to introduce scarcity, similar to precious metals
-          like gold. Unlike regular money, no one can cause inflation in the
-          Bitcoin system.
+          like gold. Unlike regular money, no one can print more Bitcoin and cause inflation in the
+          Bitcoin system — not even the creator.
         </p>
 
         <div className="my-8 grid grid-cols-2 gap-3">
