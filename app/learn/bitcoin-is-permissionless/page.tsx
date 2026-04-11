@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
+import StatCard from "@/components/StatCard";
+import TopicCard from "@/components/TopicCard";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -39,69 +41,93 @@ export default function BitcoinIsPermissionlessPage() {
           you from accessing your money.
         </p>
 
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Traditional Banks"
+            value="Permission"
+            sublabel="Can freeze, deny, or restrict access"
+            danger
+          />
+          <StatCard
+            label="Bitcoin"
+            value="No Permission"
+            sublabel="Open to anyone, anywhere, anytime"
+            success
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">No Gatekeepers</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          Digital Cash for Everyone
+        </h2>
+
         <p>
-          Bitcoin is inclusive by design. It breaks down barriers commonly found
-          in conventional financial systems, where access requires extensive
-          verification and approval from banks.
+          Bitcoin is inclusive by design. Unlike traditional banks that act as
+          gatekeepers, Bitcoin allows direct peer-to-peer transactions — no
+          intermediaries, no approval needed. It&apos;s kind of like digital cash.
         </p>
 
         <p>
-          This permissionless nature is made possible by the Bitcoin blockchain.
-          It keeps track of who owns what and prevents people from cheating.
+          As long as you have an internet connection and a Bitcoin wallet, you
+          can participate in the network, send, and receive Bitcoin.
         </p>
 
-        <p>
-          Unlike traditional banks that act as gatekeepers of financial
-          transactions, Bitcoin allows direct peer-to-peer transactions. You can
-          send money directly to someone else without any intermediaries. It&apos;s
-          kind of like digital cash.
-        </p>
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="How to Use Bitcoin"
+            description="Get a wallet and start using Bitcoin as freedom money."
+            href="/how-to-use-bitcoin"
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Freedom Money</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          No One Can Freeze Your Bitcoin
+        </h2>
 
         <p>
-          As long as you have an internet connection and a{" "}
-          <Link href="/how-to-use-bitcoin">Bitcoin wallet,</Link> you can
-          participate in the network, send, and receive Bitcoin.
+          In traditional finance, institutions can freeze your money or deny you
+          an account based on your location, credit history, or personal
+          attributes. People have found this out the hard way.
         </p>
 
-        <p>
-          In traditional finance, your ability to participate depends on the
-          permission of banks and financial institutions. These institutions can
-          freeze your money or deny you an account based on your location, credit
-          history, or personal attributes.
-        </p>
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <TopicCard
+            title="Debanking in America"
+            description="Banks have cut off access to accounts for political and personal reasons."
+            href={EXTERNAL_LINKS.debanking}
+            external
+          />
+          <TopicCard
+            title="Canada Froze Accounts"
+            description="Workers had their bank accounts frozen by their own government."
+            href={EXTERNAL_LINKS.canadaTruckers}
+            external
+          />
+        </div>
 
         <p>
-          Traditional finance has{" "}
-          <a href={EXTERNAL_LINKS.debanking} target="_blank" rel="noopener noreferrer">
-            a really bad track record of this.
-          </a>
-        </p>
-
-        <p>
-          Workers in Canada found this out the hard way when{" "}
-          <a href={EXTERNAL_LINKS.canadaTruckers} target="_blank" rel="noopener noreferrer">
-            their own government froze their bank accounts.
-          </a>
-        </p>
-
-        <p>
-          Bitcoin, by contrast, is fundamentally inclusive. Bitcoin can&apos;t
-          discriminate based on personal details, how much money you have, your
-          job, or geographic location.
-        </p>
-
-        <p>
-          No one can stop you from using Bitcoin because{" "}
+          Bitcoin can&apos;t discriminate based on personal details, how much money
+          you have, your job, or where you live. No one can stop you from using
+          Bitcoin because{" "}
           <Link href="/learn/bitcoin-is-decentralized">
             Bitcoin is decentralized.
           </Link>
         </p>
 
-        <p>
-          Bitcoin removes barriers to entry and eliminates the need for
-          centralized approval. Bitcoin empowers individuals and gives you the
-          freedom to save and spend your money without restrictions.
-        </p>
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="Bitcoin is Decentralized"
+            description="No single entity — no government, no corporation — controls Bitcoin."
+            href="/learn/bitcoin-is-decentralized"
+          />
+        </div>
 
         <p className="text-lg font-medium text-foreground">
           Bitcoin is permissionless. Bitcoin is better money.

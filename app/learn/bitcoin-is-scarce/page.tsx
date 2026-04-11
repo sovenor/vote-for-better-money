@@ -3,6 +3,7 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
 import StatCard from "@/components/StatCard";
+import TopicCard from "@/components/TopicCard";
 import { fetchStats } from "@/lib/api";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
@@ -56,23 +57,44 @@ export default async function BitcoinIsScarcePage() {
           />
         </div>
 
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Capped Supply</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
-          Capped Supply
+          No One Can Print More
         </h2>
 
         <p>
           The 21 million cap was set by Bitcoin&apos;s creator, Satoshi Nakamoto.
           This limit was chosen to introduce scarcity, similar to precious metals
-          like gold.
+          like gold. Unlike regular money, no one can cause inflation in the
+          Bitcoin system.
         </p>
 
-        <p>
-          Scarcity is a key feature that can help to maintain and potentially
-          increase the value of an asset over time.
-        </p>
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Bitcoin"
+            value="21 Million"
+            detail="(21,000,000)"
+            sublabel="Fixed forever"
+            success
+          />
+          <StatCard
+            label="US Dollar"
+            value={`${stats.m1SupplyTrillions} Trillion`}
+            detail={`(${(parseFloat(stats.m1SupplyTrillions) * 1_000_000_000_000).toLocaleString("en-US", { maximumFractionDigits: 0 })})`}
+            sublabel="And counting..."
+            danger
+          />
+        </div>
 
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Proof of Work</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
-          How it Works
+          Mining &amp; Halving
         </h2>
 
         <p>
@@ -82,50 +104,49 @@ export default async function BitcoinIsScarcePage() {
         </p>
 
         <p>
-          And unlike regular money, there&apos;s a cap to the amount of Bitcoin
-          that can ever exist. This means it doesn&apos;t lose value like dollars
-          because no one can cause inflation in the Bitcoin system.
+          The reward miners receive is halved approximately every four years — an
+          event known as the &quot;halving.&quot; This gradual reduction ensures the total
+          supply will never exceed 21 million.
         </p>
 
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Last Bitcoin Mined"
+            value="~2140"
+            sublabel="Over 100 years from now"
+            accent
+          />
+          <StatCard
+            label="After That?"
+            value="Still Works"
+            sublabel="Transaction fees keep it running"
+            accent
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Blockchain</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
-          Halving Events
+          Verified by Everyone
         </h2>
 
         <p>
-          The reward miners receive for their digital hard work is halved
-          approximately every four years, an event known as the &quot;halving.&quot; This
-          gradual reduction in the new supply ensures that the total supply will
-          never exceed 21 million.
+          The Bitcoin blockchain records all transactions and is maintained by a
+          network of computers (called nodes) all around the world. These nodes
+          make the 21 million supply cap transparent and verifiable — no one can
+          break the rules.
         </p>
 
-        <p>
-          The last Bitcoin is expected to be mined around the year 2140. Sending a
-          Bitcoin transaction requires paying a small fee to miners, so even after
-          all 21 million Bitcoin are mined the system will continue to function.
-        </p>
-
-        <h2 className="text-2xl font-bold text-foreground mb-6">
-          The Role of the Blockchain
-        </h2>
-
-        <p>
-          The Bitcoin blockchain, a decentralized ledger, records all
-          transactions. It&apos;s maintained by a network of computers (called nodes)
-          all around the world.
-        </p>
-
-        <p>
-          Anyone can{" "}
-          <a href={EXTERNAL_LINKS.bitcoinNode} target="_blank" rel="noopener noreferrer">
-            download free software to run their own node.
-          </a>{" "}
-          Bitcoin nodes make the 21 million supply cap transparent and verifiable.
-        </p>
-
-        <p>
-          No one can make more than 21 million Bitcoin because these nodes enforce
-          the rules.
-        </p>
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="Run a Bitcoin Node"
+            description="Download the free software and verify Bitcoin's rules yourself."
+            href={EXTERNAL_LINKS.bitcoinNode}
+            external
+          />
+        </div>
 
         <p className="text-lg font-medium text-foreground">
           Bitcoin is scarce. Bitcoin is better money.
