@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import StatCard from "@/components/StatCard";
+import TopicCard from "@/components/TopicCard";
+import { fetchStats } from "@/lib/api";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -16,7 +19,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HowToUseBitcoinPage() {
+export default async function HowToUseBitcoinPage() {
+  const stats = await fetchStats();
+
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-10">
       <Breadcrumbs items={[{ label: "How to Use Bitcoin" }]} />
@@ -29,86 +34,130 @@ export default function HowToUseBitcoinPage() {
         <p className="text-lg sm:text-xl text-muted leading-relaxed">
           Whether you buy Bitcoin or earn Bitcoin, it&apos;s important to take full
           control of it. Taking full control of your Bitcoin transforms it into{" "}
-          <Link href="/learn/bitcoin-is-permissionless">freedom money.</Link>
+          <Link href="/learn/bitcoin-is-permissionless">freedom money</Link>.
         </p>
 
         <p>
-          Freedom money is money that can't be censored, frozen, or seized.
-           If you can download an app, you can get Bitcoin for the first time and
-          take full control of it.
+          Freedom money is money no one can censor, freeze, or seize — and if
+          you can download an app, you can have it.
         </p>
 
         {/* Buy Bitcoin */}<h2 className="text-2xl font-bold text-foreground mb-6">
-          How to Buy Bitcoin
+          Long Term Savings Account
         </h2>
 
         <p>
-          You may already have an app that gives you access to Bitcoin. Our
-          favorite apps for buying Bitcoin are{" "}
-          <a href={EXTERNAL_LINKS.cashApp} target="_blank" rel="noopener noreferrer">
-            Cash App
-          </a>{" "}
-          and{" "}
-          <a href={EXTERNAL_LINKS.strike} target="_blank" rel="noopener noreferrer">
-            Strike.
-          </a>
+          Bitcoin is best used as a long term savings account. Because the value can go up and down in the short term, it's important to only put money in that you don't need to use for several years.
         </p>
+        <p>
+          Over the long term, Bitcoin is a much better savings account than dollars which consistently lose value due to inflation.
+        </p>
+
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Bitcoin"
+            value={stats.btcChange4yr ? `+${stats.btcChange4yr}%` : "No data"}
+            sublabel="Last 4 years"
+            success
+          />
+          <StatCard
+            label="US Dollar"
+            value={stats.usdInflation4yr ? `-${stats.usdInflation4yr}%` : "No data"}
+            sublabel="Purchasing power lost"
+            danger
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Step 1</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          Buy Bitcoin
+        </h2>
+
+        <p>
+          You may already have an app that gives you access to Bitcoin.
+          Here are some of our favorite apps for buying Bitcoin:
+        </p>
+
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <TopicCard
+            title="Cash App"
+            description="A simple way to buy Bitcoin with an app you might already have."
+            href={EXTERNAL_LINKS.cashApp}
+            external
+          />
+          <TopicCard
+            title="Strike"
+            description="Buy Bitcoin and set up automatic recurring purchases."
+            href={EXTERNAL_LINKS.strike}
+            external
+          />
+        </div>
 
         <p>
           After you get some Bitcoin, it&apos;s important that you take full control
           of it. Here&apos;s how:
         </p>
 
-        {/* Take Full Control */}
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Step 2</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Take Full Control
         </h2>
 
         <p>
-          One of the main benefits of Bitcoin is the ability to use it as{" "}
-          <Link href="/learn/bitcoin-is-permissionless">freedom money.</Link>{" "}
-          Freedom money is money that can&apos;t be censored, frozen, or seized.
+          If you leave your Bitcoin in the app where you bought it, you
+          don&apos;t get any of the{" "}
+          <Link href="/learn/bitcoin-is-permissionless">freedom benefits.</Link>{" "}
+          The same is true if you buy a Bitcoin ETF — no freedom benefits,
+          no withdrawals, and you&apos;ll pay a fee every year.
         </p>
+
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="Self-Custody"
+            value="Free"
+            sublabel="Full freedom. No annual fees."
+            success
+          />
+          <StatCard
+            label="Bitcoin ETF"
+            value="Fees"
+            sublabel="No freedom. Annual fees forever."
+            danger
+          />
+        </div>
 
         <p>
-          No one can stop you from using Bitcoin if you withdraw it to your own
-          wallet. But if you leave your Bitcoin in the app where you bought it, you
-          don&apos;t get any of the freedom benefits.
+          To use your Bitcoin as{" "}
+          <Link href="/learn/bitcoin-is-permissionless">freedom money,</Link>{" "}
+          simply withdraw it from the app where you bought it to a wallet you
+          control. If you can download an app, you can take full control of your Bitcoin.
         </p>
 
-        <p>
-          The same is true if you buy a Bitcoin ETF instead of actual Bitcoin.
-          Bitcoin ETFs don&apos;t have any of the freedom benefits, and they prevent
-          you from withdrawing your Bitcoin to your own wallet.
-        </p>
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <TopicCard
+            title="Blockstream Green"
+            description="Our favorite free mobile wallet for taking full control of your Bitcoin."
+            href={EXTERNAL_LINKS.blockstreamGreen}
+            external
+          />
+          <TopicCard
+            title="Full Wallet Guide"
+            description="Explore more Bitcoin wallet options to find the right one for you."
+            href={EXTERNAL_LINKS.bitcoinRocksWallets}
+            external
+          />
+        </div>
 
-        <p>
-          Buying and holding a Bitcoin ETF will force you to pay a fee every year.
-          But taking full control of your Bitcoin is 100% free with no annual fees.
-        </p>
-
-        <p>
-          To use your Bitcoin as freedom money, simply withdraw it from the app
-          where you bought it to a wallet you control.
-        </p>
-
-        <p>
-          Our favorite free mobile wallet is{" "}
-          <a href={EXTERNAL_LINKS.blockstreamGreen} target="_blank" rel="noopener noreferrer">
-            Blockstream Green.
-          </a>{" "}
-          If you can download an app, you can take full control of your Bitcoin.
-        </p>
-
-        <p>
-          You can also check out this{" "}
-          <a href={EXTERNAL_LINKS.bitcoinRocksWallets} target="_blank" rel="noopener noreferrer">
-            Bitcoin wallet guide
-          </a>{" "}
-          for more wallet options.
-        </p>
-
-        {/* Earn Bitcoin */}
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Step 3</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Earn Bitcoin
         </h2>
@@ -116,42 +165,47 @@ export default function HowToUseBitcoinPage() {
         <p>
           There&apos;s a growing movement of people saying &quot;Pay me in Bitcoin!&quot;
           Whether you&apos;re a pro athlete or a regular person, you can be paid in
-          Bitcoin.
+          Bitcoin. You can start asking to be paid in Bitcoin too.
         </p>
 
-        <p>
-          Lots of small businesses accept Bitcoin for their goods and services,
-          because{" "}
-          <a href={EXTERNAL_LINKS.bitcoinRocksBusiness} target="_blank" rel="noopener noreferrer">
-            Bitcoin is good for business.
-          </a>
-        </p>
-
-        <p>You can start asking to be paid in Bitcoin too.</p>
-
-        <p>
-          Don&apos;t want to convince your boss? Apps like{" "}
-          <a href={EXTERNAL_LINKS.strike} target="_blank" rel="noopener noreferrer">
-            Strike
-          </a>{" "}
-          will automatically convert a portion of your paycheck into Bitcoin each
-          month.
-        </p>
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <TopicCard
+            title="Strike"
+            description="Automatically convert a portion of your paycheck into Bitcoin each month."
+            href={EXTERNAL_LINKS.strike}
+            external
+          />
+          <TopicCard
+            title="Bitcoin for Business"
+            description="Learn why more and more businesses are accepting Bitcoin."
+            href={EXTERNAL_LINKS.bitcoinRocksBusiness}
+            external
+          />
+        </div>
       </div>
 
-      {/* CTAs */}
-      <div className="flex flex-col items-center gap-4 mt-12">
-        <Link href="/learn" className="btn-primary">
-          Learn About Bitcoin
-        </Link>
-        <a
-          href={EXTERNAL_LINKS.bitcoinRocks}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-secondary"
-        >
-          bitcoin.rocks →
-        </a>
+      {/* Learn More */}
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          Learn more about Bitcoin
+        </h2>
+        <p className="mb-7 text-muted">
+          You don&apos;t need to wait for election day to vote for better money.
+          Bitcoin is better money — and you can start using it today.
+        </p>
+        <div className="grid grid-cols-1 gap-4 mb-0">
+          <TopicCard
+            title="Learn About Bitcoin"
+            description="Discover why Bitcoin is scarce, decentralized, permissionless, sovereign, and American."
+            href="/learn"
+          />
+          <TopicCard
+            title="Bitcoin is Improving the World"
+            description="See how Bitcoin is making a difference for people everywhere."
+            href={EXTERNAL_LINKS.bitcoinRocks}
+            external
+          />
+        </div>
       </div>
     </div>
   );
