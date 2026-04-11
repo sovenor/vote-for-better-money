@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/img/meta/meta-home.png",
+        url: "/img/meta/meta-home-v2.png",
         width: 1200,
         height: 630,
         alt: SITE_NAME,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
-    images: ["/img/meta/meta-home.png"],
+    images: ["/img/meta/meta-home-v2.png"],
   },
   robots: {
     index: true,

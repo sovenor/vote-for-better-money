@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Use Bitcoin | Vote For Better Money",
     url: `${SITE_URL}/how-to-use-bitcoin`,
-    images: [{ url: "/img/meta/meta-use-bitcoin.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
 };
 

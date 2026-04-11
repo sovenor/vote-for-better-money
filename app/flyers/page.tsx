@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Vote For Better Money Flyers",
     url: `${SITE_URL}/flyers`,
-    images: [{ url: "/img/meta/meta-flyer.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
 };
 

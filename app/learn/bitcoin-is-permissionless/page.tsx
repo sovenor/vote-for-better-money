@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Bitcoin is Permissionless | Vote For Better Money",
     url: `${SITE_URL}/learn/bitcoin-is-permissionless`,
     images: [
-      { url: "/img/meta/meta-permissionless.png", width: 1200, height: 630 },
+      { url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 },
     ],
   },
 };

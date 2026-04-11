@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "What is Nostr? | Vote For Better Money",
     url: `${SITE_URL}/nostr`,
-    images: [{ url: "/img/meta/meta-nostr.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/meta/meta-home-v2.png", width: 1200, height: 630 }],
   },
 };
 
