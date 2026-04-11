@@ -34,8 +34,8 @@ export default async function HomePage() {
           <Image
             src="/img/logo-dark-mode-v2.png"
             alt="Vote for Better Money logo"
-            width={180}
-            height={130}
+            width={150}
+            height={108}
             className="mx-auto mb-4"
             priority
           />
