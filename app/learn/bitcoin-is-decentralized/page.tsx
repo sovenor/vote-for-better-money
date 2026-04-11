@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleNav from "@/components/ArticleNav";
+import StatCard from "@/components/StatCard";
+import TopicCard from "@/components/TopicCard";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -37,8 +39,27 @@ export default function BitcoinIsDecentralizedPage() {
           corporation.
         </p>
 
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <StatCard
+            label="US Dollar"
+            value="1 Entity"
+            sublabel="Controlled by the Federal Reserve"
+            danger
+          />
+          <StatCard
+            label="Bitcoin"
+            value="Thousands"
+            sublabel="Run by nodes across the world"
+            success
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Network of Nodes</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
-          Network of Nodes
+          No One Controls Bitcoin
         </h2>
 
         <p>
@@ -48,14 +69,24 @@ export default function BitcoinIsDecentralizedPage() {
         </p>
 
         <p>
-          Anyone can{" "}
-          <a href={EXTERNAL_LINKS.bitcoinNode} target="_blank" rel="noopener noreferrer">
-            download free software to run their own Bitcoin node.
-          </a>{" "}
-          Running a node lets you easily verify the rules of the network are being
-          followed.
+          Anyone can download free software to run their own Bitcoin node. Running
+          a node lets you verify the rules of the network are being followed. The
+          software is free and open source — transparent, with no hidden changes.
         </p>
 
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="Run a Bitcoin Node"
+            description="Download the free software and become part of the network yourself."
+            href={EXTERNAL_LINKS.bitcoinNode}
+            external
+          />
+        </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Proof of Work</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Mining for Security
         </h2>
@@ -63,36 +94,28 @@ export default function BitcoinIsDecentralizedPage() {
         <p>
           Bitcoin mining is done by computers to secure the network. Miners use
           &quot;proof of work&quot; — computers put in lots of effort to create Bitcoin and
-          confirm transactions. This is like digital hard work.
+          confirm transactions. This process secures the entire system and
+          prevents fraudulent transactions.
         </p>
 
         <p>
-          And unlike regular money,{" "}
-          <Link href="/learn/bitcoin-is-scarce">
-            there&apos;s a cap to the amount of Bitcoin that can ever exist.
-          </Link>{" "}
-          This means it doesn&apos;t lose value like dollars because no one can cause
-          inflation in the Bitcoin system.
+          And unlike regular money, there&apos;s a cap to the amount of Bitcoin that
+          can ever exist. This means it doesn&apos;t lose value like dollars because
+          no one can cause inflation in the Bitcoin system.
         </p>
 
-        <p>
-          This process secures the entire system and prevents fraudulent
-          transactions.
-        </p>
+        <div className="my-8 grid grid-cols-1 gap-3">
+          <TopicCard
+            title="Bitcoin is Scarce"
+            description="There will only ever be 21 million Bitcoin. No one can print more."
+            href="/learn/bitcoin-is-scarce"
+          />
+        </div>
 
-        <h2 className="text-2xl font-bold text-foreground mb-6">
-          Free and Open Source
-        </h2>
-
-        <p>
-          Anyone can{" "}
-          <a href={EXTERNAL_LINKS.bitcoinNode} target="_blank" rel="noopener noreferrer">
-            see and use Bitcoin&apos;s software for free.
-          </a>{" "}
-          This openness means that the system is transparent, and no hidden
-          changes can be made.
-        </p>
-
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Blockchain</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Unchangeable Record
         </h2>
@@ -104,14 +127,10 @@ export default function BitcoinIsDecentralizedPage() {
         </p>
 
         <p>
-          In essence, Bitcoin operates like a community network. Many computers
-          across the globe collaborate to confirm transactions, secure the system,
-          and maintain a reliable record.
-        </p>
-
-        <p>
-          This collective approach ensures that Bitcoin remains independent and
-          not under the control of any single entity.
+          Many computers across the globe collaborate to confirm transactions,
+          secure the system, and maintain a reliable record. This collective
+          approach ensures that Bitcoin remains independent and not under the
+          control of any single entity.
         </p>
 
         <p className="text-lg font-medium text-foreground">
