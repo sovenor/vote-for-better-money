@@ -51,15 +51,15 @@ export default function FlyersPage() {
         </p>
 
         <div className="my-8 rounded-xl bg-card border border-card-border overflow-hidden">
-          <div className="p-4">
+          <a href="/files/flyer-v2.pdf" target="_blank" rel="noopener noreferrer" className="block p-4 no-underline">
             <Image
               src="/img/flyer-v2-preview.png"
-              alt="Vote For Better Money flyer preview"
+              alt="Vote For Better Money flyer preview — click to download PDF"
               width={600}
               height={776}
               className="w-full h-auto rounded-lg"
             />
-          </div>
+          </a>
           <div className="flex flex-col items-center text-center gap-4 p-6 pt-2">
             <p className="text-lg font-bold text-foreground m-0">
               Vote For Better Money Flyer
@@ -108,6 +108,22 @@ export default function FlyersPage() {
 
       {/* ── Related ────────────────────────────────── */}
       <div className="grid grid-cols-1 gap-4 mt-12">
+        <a
+          href="/files/flyer-v2.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block p-5 rounded-xl bg-card border border-card-border no-underline hover:border-accent/40 hover:bg-card/80 transition-all group"
+        >
+          <h3 className="text-lg font-bold text-foreground group-hover:text-accent transition-colors mb-2">
+            Download Flyer PDF
+          </h3>
+          <p className="text-sm text-muted leading-relaxed m-0">
+            Standard letter size (8.5 × 11 in) · Black and white · PDF
+          </p>
+          <span className="inline-block mt-3 text-xs font-medium text-accent group-hover:translate-x-1 transition-transform">
+            Download now →
+          </span>
+        </a>
         <TopicCard
           title="Share Links"
           description="Copy and share direct links to our educational pages."
