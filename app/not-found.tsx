@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 py-20 text-center">
       <Image
-        src="/img/logo-dark-mode-v2.png"
+        src="/img/logo-dark-mode-v3.png"
         alt="Vote For Better Money"
         width={80}
         height={80}

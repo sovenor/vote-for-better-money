@@ -42,7 +42,7 @@ export default async function HomePage() {
       <section className="max-w-2xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
           <Image
-            src="/img/logo-dark-mode-v2.png"
+            src="/img/logo-dark-mode-v3.png"
             alt="Vote for Better Money logo"
             width={150}
             height={108}
