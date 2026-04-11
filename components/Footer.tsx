@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-card-border mt-20">
+    <footer className="border-t border-card-border mt-10">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
         <div className="flex flex-col items-center text-center gap-6">
           <Link href="/" className="no-underline">
