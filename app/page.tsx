@@ -51,6 +51,9 @@ export default async function HomePage() {
             priority
           />
         </h1>
+        <p className="text-lg sm:text-xl text-muted leading-relaxed max-w-xl mx-auto mb-5">
+          Our money is broken.<br />Prices keep going up.<br />Inflation is out of control.
+        </p>
         <p className="text-lg sm:text-xl text-muted leading-relaxed max-w-xl mx-auto">
           Election after election, politicians promise to fix America. But after
           they&apos;re elected, they rarely keep their promises. What if you could
