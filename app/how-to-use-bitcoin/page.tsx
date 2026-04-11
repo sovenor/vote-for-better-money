@@ -230,6 +230,39 @@ export default async function HowToUseBitcoinPage() {
           }),
         }}
       />
+      {/* HowTo Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Use Bitcoin",
+            description:
+              "Whether you buy or earn Bitcoin, it's important to take full control of it. Learn how to buy, earn, and self-custody your Bitcoin.",
+            step: [
+              {
+                "@type": "HowToStep",
+                name: "Buy Bitcoin",
+                text: "Buy Bitcoin through apps like Cash App or Strike. You may already have an app that gives you access to Bitcoin.",
+                url: `${SITE_URL}/how-to-use-bitcoin`,
+              },
+              {
+                "@type": "HowToStep",
+                name: "Take Full Control (Self-Custody)",
+                text: "Withdraw your Bitcoin from the app where you bought it to a wallet you control, like Blockstream Green. This transforms your Bitcoin into freedom money — money no one can censor, freeze, or seize.",
+                url: `${SITE_URL}/how-to-use-bitcoin`,
+              },
+              {
+                "@type": "HowToStep",
+                name: "Earn Bitcoin",
+                text: "Ask to be paid in Bitcoin. Apps like Strike can automatically convert a portion of your paycheck into Bitcoin each month.",
+                url: `${SITE_URL}/how-to-use-bitcoin`,
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   );
 }
