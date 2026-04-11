@@ -13,7 +13,7 @@ export default function Footer() {
               alt="Vote For Better Money"
               width={60}
               height={60}
-              className="w-15 h-15 opacity-60 hover:opacity-100 transition-opacity"
+              className="w-15 h-15"
             />
           </Link>
 
