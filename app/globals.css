@@ -39,14 +39,16 @@ body {
 }
 
 /* Link styles */
-a {
-  color: var(--color-accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.2s ease;
-}
-a:hover {
-  color: var(--color-accent-hover);
+@layer base {
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+  a:hover {
+    color: var(--color-accent-hover);
+  }
 }
 
 /* Selection */
