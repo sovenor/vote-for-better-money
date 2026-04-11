@@ -70,7 +70,7 @@ export default function BitcoinIsPermissionlessPage() {
           <div className="flex-1 h-px bg-accent/40" />
         </div>
         <h2 className="text-2xl font-bold text-foreground mb-6">
-          Digital Cash for Everyone
+          Freedom Money for Everyone
         </h2>
 
         <p>
