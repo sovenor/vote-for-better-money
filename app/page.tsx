@@ -34,8 +34,8 @@ export default async function HomePage() {
           <Image
             src="/img/logo-dark-mode-v2.png"
             alt=""
-            width={100}
-            height={100}
+            width={180}
+            height={130}
             className="mx-auto mb-4"
             priority
           />
