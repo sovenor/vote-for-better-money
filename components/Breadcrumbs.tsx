@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface BreadcrumbItem {
   label: string;
@@ -14,8 +15,14 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted list-none p-0 m-0">
         <li>
-          <Link href="/" className="hover:text-accent no-underline">
-            Home
+          <Link href="/" className="hover:text-accent no-underline flex items-center">
+            <Image
+              src="/img/logo-dark-mode-v3.png"
+              alt="Home"
+              width={290}
+              height={209}
+              className="w-15 h-auto mr-2"
+            />
           </Link>
         </li>
         {items.map((item, i) => (
