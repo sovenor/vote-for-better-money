@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: "/meetup-box-success", destination: "/", permanent: true },
       { source: "/get-involved", destination: "/", permanent: true },
       { source: "/stickers", destination: "/", permanent: false },
+      { source: "/nostr", destination: "/", permanent: false },
       { source: "/sticker-files", destination: "/", permanent: true },
       { source: "/sticker-success", destination: "/", permanent: true },
       // Legacy redirects

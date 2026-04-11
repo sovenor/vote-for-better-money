@@ -81,11 +81,6 @@ Printable flyers with QR codes for public posting in coffee shops, bulletin boar
 ## Share Links (/links)
 Easy-to-copy links to all educational pages for sharing via text or email.
 
-## What is Nostr? (/nostr)
-Nostr is a decentralized social media protocol (not a platform). No one controls it. You can move between clients without losing followers. Bitcoin is built in natively for tipping content creators.
-
----
-
 ## Contact
 - Email: hi@bitcoin.rocks
 - Related site: https://bitcoin.rocks
