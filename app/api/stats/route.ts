@@ -100,9 +100,9 @@ async function fetchBtcPrice(): Promise<{
 
 async function fetchInflation(): Promise<number | null> {
   try {
-    // CPI from FRED - get latest and 4 years prior
+    // CPI from FRED - get latest and 4 years prior (monthly data, need 60+ for 4yr window)
     const url =
-      "https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=50&file_type=json&api_key=DEMO_KEY";
+      "https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=60&file_type=json&api_key=DEMO_KEY";
     const res = await fetch(url, { signal: AbortSignal.timeout(8000) });
     if (!res.ok) return null;
     const data = await res.json();
