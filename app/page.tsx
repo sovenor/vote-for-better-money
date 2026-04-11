@@ -195,8 +195,7 @@ export default async function HomePage() {
 
           <p>
             The Bitcoin network isn&apos;t owned by anyone. It isn&apos;t controlled
-            by any government or corporation. And people around the world are
-            already using it to protect their freedom.
+            by any government or corporation. It's designed to uphold your freedom and protect your money.
           </p>
 
           <div className="my-8 grid grid-cols-2 gap-3">
@@ -228,10 +227,10 @@ export default async function HomePage() {
 
           <p>
             People around the world are already using Bitcoin to protect their
-            freedom — even when their own governments tried to stop them.
+            freedom — even when their own governments refused to help or tried to stop them.
           </p>
 
-          <div className="my-8 grid grid-cols-2 gap-3">
+          <div className="my-8 grid grid-cols-2 gap-3 mb-0">
             <FreedomCard
               icon={<BoltIcon />}
               title="Texas"
@@ -261,11 +260,6 @@ export default async function HomePage() {
               external
             />
           </div>
-
-          <p className="text-lg font-medium text-foreground">
-            You don&apos;t need to wait for election day to vote for better money.
-            Bitcoin is better money — and you can start using it today.
-          </p>
         </div>
       </section>
 
@@ -274,7 +268,11 @@ export default async function HomePage() {
         <h2 className="text-2xl font-bold text-foreground mb-6">
           Learn more about Bitcoin
         </h2>
-        <div className="grid grid-cols-1 gap-4">
+        <p className="mb-7">
+            You don&apos;t need to wait for election day to vote for better money.
+            Bitcoin is better money — and you can start using it today.
+        </p>
+        <div className="grid grid-cols-1 gap-4 mb-0">
           <TopicCard
             title="How to Use Bitcoin"
             description="Buy Bitcoin, earn Bitcoin, and take full control of your money."
