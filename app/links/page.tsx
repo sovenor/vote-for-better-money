@@ -82,10 +82,7 @@ export default function LinksPage() {
       </div>
 
       <div className="flex flex-col items-center gap-4">
-        <Link href="/stickers" className="btn-primary">
-          Get Stickers
-        </Link>
-        <Link href="/flyers" className="btn-secondary">
+        <Link href="/flyers" className="btn-primary">
           Get Flyers
         </Link>
       </div>

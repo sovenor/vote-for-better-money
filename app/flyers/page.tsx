@@ -109,11 +109,6 @@ export default function FlyersPage() {
       {/* ── Related ────────────────────────────────── */}
       <div className="grid grid-cols-1 gap-4 mt-12">
         <TopicCard
-          title="Get Stickers"
-          description="Request free stickers or print your own to put up in public."
-          href="/stickers"
-        />
-        <TopicCard
           title="Share Links"
           description="Copy and share direct links to our educational pages."
           href="/links"

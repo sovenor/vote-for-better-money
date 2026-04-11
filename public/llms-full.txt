@@ -75,9 +75,6 @@ A growing movement of people are being paid in Bitcoin. Small businesses accept 
 
 ---
 
-## Stickers (/stickers)
-Free sticker packs with QR codes linking to educational content about Bitcoin. Available for mailing (USA only) or self-printing.
-
 ## Flyers (/flyers)
 Printable flyers with QR codes for public posting in coffee shops, bulletin boards, etc.
 
