@@ -110,7 +110,7 @@ export default function BitcoinIsAmericanPage() {
           especially when we&apos;re worried about things like inflation.
         </p>
 
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <Image
             src="/img/guide-flag.png"
             alt="American flag representing Bitcoin's alignment with American values"

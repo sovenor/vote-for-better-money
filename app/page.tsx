@@ -93,7 +93,7 @@ export default async function HomePage() {
             </a>
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+          <div className="my-8 rounded-xl overflow-hidden">
             <a href={EXTERNAL_LINKS.fredM1} target="_blank" rel="noopener noreferrer">
               <Image
                 src="/img/guide-dollar-supply.png"
@@ -118,7 +118,7 @@ export default async function HomePage() {
             to both Democrats and Republicans.
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+          <div className="my-8 rounded-xl overflow-hidden">
             <a href={EXTERNAL_LINKS.fredDebt} target="_blank" rel="noopener noreferrer">
               <Image
                 src="/img/guide-party-debt.png"
@@ -154,7 +154,7 @@ export default async function HomePage() {
             print more.
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+          <div className="my-8 rounded-xl overflow-hidden">
             <Image
               src="/img/guide-supply.png"
               alt="Comparison of dollar unlimited supply vs Bitcoin fixed 21 million supply"
@@ -204,7 +204,7 @@ export default async function HomePage() {
             — it upholds freedom and respects proof of work.
           </p>
 
-          <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+          <div className="my-8 rounded-xl overflow-hidden">
             <Image
               src="/img/guide-flag.png"
               alt="American flag representing Bitcoin's alignment with American values"

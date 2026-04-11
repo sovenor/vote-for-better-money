@@ -38,7 +38,7 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         {/* Buy Bitcoin */}
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <Image
             src="/img/use-buy-bitcoin.png"
             alt="How to buy Bitcoin"
@@ -77,7 +77,7 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         {/* Take Full Control */}
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <Image
             src="/img/use-take-full-control.png"
             alt="Take full control of your Bitcoin"
@@ -136,7 +136,7 @@ export default function HowToUseBitcoinPage() {
         </p>
 
         {/* Earn Bitcoin */}
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <Image
             src="/img/use-earn-bitcoin.png"
             alt="How to earn Bitcoin"

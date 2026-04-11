@@ -31,7 +31,7 @@ export default function StickersPage() {
           help by slapping a sticker in public.
         </p>
 
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <Image
             src="/img/cta-sticker-request.png"
             alt="Vote For Better Money sticker"

@@ -31,7 +31,7 @@ export default function FlyersPage() {
           help by putting up a flyer in public.
         </p>
 
-        <div className="my-8 rounded-xl overflow-hidden border border-card-border">
+        <div className="my-8 rounded-xl overflow-hidden">
           <a href="/files/flyer-print-v1.pdf" target="_blank" rel="noopener noreferrer">
             <Image
               src="/img/cta-flyer-print.png"
