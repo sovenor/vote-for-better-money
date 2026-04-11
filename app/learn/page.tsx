@@ -104,6 +104,25 @@ export default function LearnPage() {
           }),
         }}
       />
+      {/* ItemList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Learn About Bitcoin",
+            description:
+              "Educational articles about why Bitcoin is better money.",
+            itemListElement: LEARN_ARTICLES.map((article, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: article.title,
+              url: `${SITE_URL}${article.href}`,
+            })),
+          }),
+        }}
+      />
     </div>
   );
 }
