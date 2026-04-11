@@ -30,15 +30,15 @@ export default async function HomePage() {
     <>
       {/* Hero Section */}
       <section className="max-w-2xl mx-auto px-4 sm:px-6 pt-12 pb-8 text-center">
-        <Image
-          src="/img/logo-dark-mode-v2.png"
-          alt="Vote For Better Money"
-          width={100}
-          height={100}
-          className="mx-auto mb-8"
-          priority
-        />
         <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6 leading-tight">
+          <Image
+            src="/img/logo-dark-mode-v2.png"
+            alt=""
+            width={100}
+            height={100}
+            className="mx-auto mb-4"
+            priority
+          />
           Vote For Better Money
         </h1>
         <p className="text-lg sm:text-xl text-muted leading-relaxed max-w-xl mx-auto">
