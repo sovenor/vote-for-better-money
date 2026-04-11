@@ -60,11 +60,6 @@ body {
   color: #fff;
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Article content styles */
 .article-content > p {
   margin-bottom: 1.5rem;
