@@ -60,8 +60,11 @@ function writeStatsFile(stats: SiteStats): void {
 // ── External API fetchers ─────────────────────────────────────────────
 
 async function fetchFredSeries(seriesId: string): Promise<number | null> {
+  const apiKey = process.env.FRED_API_KEY;
+  if (!apiKey) return null;
+
   try {
-    const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&sort_order=desc&limit=1&file_type=json&api_key=DEMO_KEY`;
+    const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&sort_order=desc&limit=1&file_type=json&api_key=${apiKey}`;
     const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     const data = await res.json();
@@ -145,9 +148,12 @@ async function fetchBtcPrice(): Promise<{
 }
 
 async function fetchInflation(): Promise<number | null> {
+  const apiKey = process.env.FRED_API_KEY;
+  if (!apiKey) return null;
+
   try {
     const url =
-      "https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=60&file_type=json&api_key=DEMO_KEY";
+      `https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=60&file_type=json&api_key=${apiKey}`;
     const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
     if (!res.ok) return null;
     const data = await res.json();
