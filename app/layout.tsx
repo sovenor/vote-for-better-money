@@ -111,8 +111,8 @@ export default function RootLayout({
         <ScrollProgress />
         <Navbar />
         <main className="flex-1">{children}</main>
-        <TickerBar />
         <Footer />
+        <TickerBar />
       </body>
     </html>
   );
