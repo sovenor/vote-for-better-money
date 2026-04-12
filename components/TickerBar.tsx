@@ -13,25 +13,22 @@ export default function TickerBar() {
       .catch(() => {});
   }, []);
 
-  if (!stats || (!stats.btcPrice && !stats.usdInflation4yr)) return null;
+  if (!stats || (!stats.btcChange4yr && !stats.usdInflation4yr)) return null;
 
   return (
     <div className="bg-surface border-b border-card-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-center gap-4 sm:gap-8 py-2 text-xs sm:text-sm overflow-x-auto">
-          {stats.btcPrice && (
+          {stats.btcChange4yr && (
             <div className="flex items-center gap-2 whitespace-nowrap">
               <span className="text-accent font-bold">₿ Bitcoin</span>
-              <span className="text-foreground">${stats.btcPrice}</span>
-              {stats.btcChange4yr && (
-                <span className="text-success font-medium">
-                  {stats.btcChange4yr.startsWith("-") ? "" : "+"}
-                  {stats.btcChange4yr}% (4yr)
-                </span>
-              )}
+              <span className="text-success font-medium">
+                {stats.btcChange4yr.startsWith("-") ? "" : "+"}
+                {stats.btcChange4yr}% (4yr)
+              </span>
             </div>
           )}
-          {stats.btcPrice && stats.usdInflation4yr && (
+          {stats.btcChange4yr && stats.usdInflation4yr && (
             <span className="text-card-border hidden sm:inline">|</span>
           )}
           {stats.usdInflation4yr && (
