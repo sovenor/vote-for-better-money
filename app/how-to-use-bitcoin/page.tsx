@@ -192,6 +192,41 @@ export default async function HowToUseBitcoinPage() {
             external
           />
         </div>
+
+        <div className="flex items-center gap-3 mb-2 mt-12">
+          <span className="text-xs uppercase tracking-wider text-accent font-bold whitespace-nowrap">Step 4</span>
+          <div className="flex-1 h-px bg-accent/40" />
+        </div>
+        <h2 className="text-2xl font-bold text-foreground mb-6">
+          Spend Bitcoin
+        </h2>
+
+        <p>
+          Millions of businesses now accept Bitcoin. Thanks to Square, any
+          merchant that uses a Square terminal can accept it. You can find a map
+          of those merchants right inside the{" "}
+          <a href={EXTERNAL_LINKS.cashApp} target="_blank" rel="noopener noreferrer">Cash App</a>.
+        </p>
+
+        <p>
+          You can also explore a worldwide map of Bitcoin-accepting businesses,
+          or shop online for products sold exclusively for Bitcoin.
+        </p>
+
+        <div className="my-8 grid grid-cols-2 gap-3">
+          <TopicCard
+            title="BTC Map"
+            description="Find businesses that accept Bitcoin near you on an interactive map."
+            href={EXTERNAL_LINKS.btcMap}
+            external
+          />
+          <TopicCard
+            title="Bitcoin Products"
+            description="Browse products and services you can buy with Bitcoin."
+            href={EXTERNAL_LINKS.bitcoinProducts}
+            external
+          />
+        </div>
       </div>
 
       {/* Learn More */}
@@ -259,6 +294,12 @@ export default async function HowToUseBitcoinPage() {
                 "@type": "HowToStep",
                 name: "Earn Bitcoin",
                 text: "Ask to be paid in Bitcoin. Apps like Strike can automatically convert a portion of your paycheck into Bitcoin each month.",
+                url: `${SITE_URL}/how-to-use-bitcoin`,
+              },
+              {
+                "@type": "HowToStep",
+                name: "Spend Bitcoin",
+                text: "Millions of businesses now accept Bitcoin. Use BTC Map or the Cash App to find merchants near you, or shop online at Bitcoin-friendly stores.",
                 url: `${SITE_URL}/how-to-use-bitcoin`,
               },
             ],

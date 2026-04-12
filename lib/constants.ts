@@ -67,4 +67,6 @@ export const EXTERNAL_LINKS = {
   nigeriaEndSars:
     "https://qz.com/africa/1922466/how-bitcoin-powered-nigerias-endsars-protests",
   debanking: "https://archive.is/BHtRj",
+  btcMap: "https://btcmap.org/map",
+  bitcoinProducts: "https://www.bitcoinproducts.com/",
 } as const;
