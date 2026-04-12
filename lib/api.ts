@@ -9,33 +9,13 @@ export interface SiteStats {
   lastUpdated: string;
 }
 
-const FALLBACK_STATS: SiteStats = {
-  nationalDebtTrillions: "36",
-  m1SupplyTrillions: "18.4",
-  bitcoinMined: "19.8 million",
-  bitcoinPercentMined: "94",
-  btcPrice: "",
-  btcChange4yr: "",
-  usdInflation4yr: "",
-  lastUpdated: new Date().toISOString(),
-};
-
 /**
- * Fetch site stats from our internal API route.
- * Used by server components with ISR revalidation.
+ * Fetch site stats directly from external APIs via shared server logic.
+ * Used by server components — calls the APIs directly, no self-referencing HTTP.
  */
 export async function fetchStats(): Promise<SiteStats> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://voteforbetter.money";
-    const res = await fetch(`${baseUrl}/api/stats`, {
-      next: { revalidate: 900 }, // 15 minutes
-    });
-    if (!res.ok) throw new Error(`Stats API returned ${res.status}`);
-    return await res.json();
-  } catch {
-    // Return fallback stats if API is unavailable
-    return FALLBACK_STATS;
-  }
+  const { getStats } = await import("./stats");
+  return getStats();
 }
 
 /**

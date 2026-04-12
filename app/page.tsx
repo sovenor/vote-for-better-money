@@ -23,6 +23,8 @@ import {
   EXTERNAL_LINKS,
 } from "@/lib/constants";
 
+export const revalidate = 86400; // Re-render once per day (stats refresh daily)
+
 export const metadata: Metadata = {
   title: `${SITE_NAME} — Bitcoin is Better Money`,
   description:

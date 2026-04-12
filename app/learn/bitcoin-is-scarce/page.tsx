@@ -7,6 +7,8 @@ import TopicCard from "@/components/TopicCard";
 import { fetchStats } from "@/lib/api";
 import { SITE_URL, EXTERNAL_LINKS } from "@/lib/constants";
 
+export const revalidate = 86400; // Re-render once per day (stats refresh daily)
+
 export const metadata: Metadata = {
   title: "Bitcoin is Scarce",
   description:
