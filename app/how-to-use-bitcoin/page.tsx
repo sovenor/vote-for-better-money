@@ -53,7 +53,7 @@ export default async function HowToUseBitcoinPage() {
         </p>
 
         {/* Buy Bitcoin */}<h2 className="text-2xl font-bold text-foreground mb-6">
-          Long Term Savings Account
+          Bitcoin is a Long Term Savings Account
         </h2>
 
         <p>
