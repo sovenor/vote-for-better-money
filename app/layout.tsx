@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import TickerBar from "@/components/TickerBar";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, GA_ID } from "@/lib/constants";
@@ -112,7 +111,6 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <TickerBar />
       </body>
     </html>
   );
