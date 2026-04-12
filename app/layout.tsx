@@ -109,9 +109,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ScrollProgress />
-        <TickerBar />
         <Navbar />
         <main className="flex-1">{children}</main>
+        <TickerBar />
         <Footer />
       </body>
     </html>
