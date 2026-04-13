@@ -59,11 +59,15 @@ export default async function BitcoinIsScarcePage() {
             value="21 Million"
             sublabel="Fixed forever"
             accent
+            href={EXTERNAL_LINKS.bitcoinWhitepaper}
+            sourceLabel="Bitcoin Whitepaper"
           />
           <StatCard
             label="Already Mined"
             value={`${stats.bitcoinPercentMined}%`}
             sublabel={stats.bitcoinMined}
+            href={EXTERNAL_LINKS.blockchainTotalBtc}
+            sourceLabel="Blockchain.com"
           />
         </div>
 
@@ -89,6 +93,8 @@ export default async function BitcoinIsScarcePage() {
             detail="(21,000,000)"
             sublabel="Fixed forever"
             success
+            href={EXTERNAL_LINKS.bitcoinWhitepaper}
+            sourceLabel="Bitcoin Whitepaper"
           />
           <StatCard
             label="US Dollar"
@@ -96,6 +102,8 @@ export default async function BitcoinIsScarcePage() {
             detail={`(${(parseFloat(stats.m1SupplyTrillions) * 1_000_000_000_000).toLocaleString("en-US", { maximumFractionDigits: 0 })})`}
             sublabel="And counting..."
             danger
+            href={EXTERNAL_LINKS.fredM1}
+            sourceLabel="FRED M1"
           />
         </div>
 
@@ -125,12 +133,16 @@ export default async function BitcoinIsScarcePage() {
             value="~2140"
             sublabel="Over 100 years from now"
             accent
+            href={EXTERNAL_LINKS.bitcoinBlockHalf}
+            sourceLabel="Bitcoin Block Half"
           />
           <StatCard
             label="After That?"
             value="Still Works"
             sublabel="Transaction fees keep it running"
             accent
+            href={EXTERNAL_LINKS.bitcoinWhitepaper}
+            sourceLabel="Bitcoin Whitepaper"
           />
         </div>
 

@@ -56,12 +56,16 @@ export default function BitcoinIsPermissionlessPage() {
             value="Permission"
             sublabel="Can freeze, deny, or restrict access"
             danger
+            href={EXTERNAL_LINKS.debanking}
+            sourceLabel="Debanking Report"
           />
           <StatCard
             label="Bitcoin"
             value="No Permission"
             sublabel="Open to anyone, anywhere, anytime"
             success
+            href={EXTERNAL_LINKS.bitcoinWhitepaper}
+            sourceLabel="Bitcoin Whitepaper"
           />
         </div>
 

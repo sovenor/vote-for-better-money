@@ -54,12 +54,16 @@ export default function BitcoinIsDecentralizedPage() {
             value="1 Entity"
             sublabel="Controlled by the Federal Reserve"
             danger
+            href={EXTERNAL_LINKS.fedAbout}
+            sourceLabel="Federal Reserve"
           />
           <StatCard
             label="Bitcoin"
             value="Thousands"
             sublabel="Run by nodes across the world"
             success
+            href={EXTERNAL_LINKS.bitnodes}
+            sourceLabel="Bitnodes"
           />
         </div>
 

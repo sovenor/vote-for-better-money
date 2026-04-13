@@ -6,6 +6,8 @@ interface StatCardProps {
   accent?: boolean;
   success?: boolean;
   danger?: boolean;
+  href?: string;
+  sourceLabel?: string;
 }
 
 export default function StatCard({
@@ -16,6 +18,8 @@ export default function StatCard({
   accent = false,
   success = false,
   danger = false,
+  href,
+  sourceLabel,
 }: StatCardProps) {
   const valueColor = danger
     ? "text-danger"
@@ -25,8 +29,8 @@ export default function StatCard({
         ? "text-accent"
         : "text-foreground";
 
-  return (
-    <div className="p-5 rounded-xl bg-card border border-card-border text-center">
+  const content = (
+    <>
       <p className="text-xs uppercase tracking-wider text-muted mb-1">{label}</p>
       <p className={`text-2xl sm:text-3xl font-bold mb-1 ${valueColor}`}>
         {value}
@@ -37,6 +41,30 @@ export default function StatCard({
       {sublabel && (
         <p className="text-xs text-muted">{sublabel}</p>
       )}
+      {href && sourceLabel && (
+        <p className="text-[10px] text-muted group-hover:text-accent group-hover:translate-x-1 transition-all mt-2">
+          Source: {sourceLabel} →
+        </p>
+      )}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="p-5 rounded-xl bg-card border border-card-border text-center no-underline hover:border-accent/40 hover:shadow-[0_0_15px_rgba(247,147,26,0.1)] transition-all group"
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className="p-5 rounded-xl bg-card border border-card-border text-center">
+      {content}
     </div>
   );
 }

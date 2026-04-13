@@ -69,4 +69,13 @@ export const EXTERNAL_LINKS = {
   debanking: "https://archive.is/BHtRj",
   btcMap: "https://btcmap.org/map",
   bitcoinProducts: "https://www.bitcoinproducts.com/",
+  // Source links for StatCards
+  bitcoinWhitepaper: "https://bitcoin.org/bitcoin.pdf",
+  btcPriceReport4yr: "https://bitcoinpricereport.com/bitcoin-priced-in-usd?chart=4y",
+  fredCPI: "https://fred.stlouisfed.org/series/CPIAUCSL",
+  fedAbout: "https://www.federalreserve.gov/aboutthefed.htm",
+  bitnodes: "https://bitnodes.io/nodes/all/",
+  blockchainTotalBtc: "https://www.blockchain.com/explorer/charts/total-bitcoins",
+  bitcoinBlockHalf: "https://www.bitcoinblockhalf.com/",
+  etfIBIT: "https://www.etf.com/IBIT",
 } as const;

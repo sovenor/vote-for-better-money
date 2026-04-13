@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { SiteStats } from "@/lib/api";
 import StatCard from "@/components/StatCard";
+import { EXTERNAL_LINKS } from "@/lib/constants";
 
 export default function DynamicStatsBar() {
   const [stats, setStats] = useState<SiteStats | null>(null);
@@ -27,6 +28,8 @@ export default function DynamicStatsBar() {
         }
         sublabel="Last 4 years"
         success
+        href={EXTERNAL_LINKS.btcPriceReport4yr}
+        sourceLabel="BTC Price Report"
       />
       <StatCard
         label="US Dollar"
@@ -39,6 +42,8 @@ export default function DynamicStatsBar() {
         }
         sublabel="Purchasing power lost over 4 years"
         danger
+        href={EXTERNAL_LINKS.fredCPI}
+        sourceLabel="FRED CPI"
       />
     </div>
   );

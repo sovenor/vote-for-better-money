@@ -69,12 +69,16 @@ export default async function HowToUseBitcoinPage() {
             value={stats.btcChange4yr ? `+${stats.btcChange4yr}%` : "Gained value"}
             sublabel="Last 4 years"
             success
+            href={EXTERNAL_LINKS.btcPriceReport4yr}
+            sourceLabel="BTC Price Report"
           />
           <StatCard
             label="US Dollar"
             value={stats.usdInflation4yr ? `-${stats.usdInflation4yr}%` : "Lost value"}
             sublabel="Purchasing power lost over 4 years"
             danger
+            href={EXTERNAL_LINKS.fredCPI}
+            sourceLabel="FRED CPI"
           />
         </div>
 
@@ -133,12 +137,16 @@ export default async function HowToUseBitcoinPage() {
             value="Free"
             sublabel="Full freedom. No annual fees."
             success
+            href={EXTERNAL_LINKS.blockstreamGreen}
+            sourceLabel="Blockstream Green"
           />
           <StatCard
             label="Bitcoin ETF"
             value="Fees"
             sublabel="No freedom. Annual fees forever."
             danger
+            href={EXTERNAL_LINKS.etfIBIT}
+            sourceLabel="ETF.com"
           />
         </div>
 

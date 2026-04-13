@@ -1,16 +1,19 @@
 # Active Context — Vote For Better Money
 
 ## Current State
-The site is in a **stable, shipped state**. All core pages, components, API integrations, and SEO infrastructure are complete and functional. No active feature branches or work-in-progress detected.
+The site is in a **stable, shipped state**. All core pages, components, API integrations, and SEO infrastructure are complete and functional.
 
 ## Recent Changes
-- Memory Bank initialized (this session) to enable continuity across future development sessions
+- Memory Bank initialized to enable continuity across future development sessions
+- **Added source links to StatCard component** — new optional `href` prop renders a subtle "Source →" link at bottom of card
+- Added 8 new source URLs to `EXTERNAL_LINKS` in `lib/constants.ts` (Bitcoin whitepaper, BTC price report, FRED CPI, Fed about page, Bitnodes, blockchain.com total BTC chart, bitcoinblockhalf.com, ETF IBIT page)
+- Updated 13 StatCard instances across 6 files with clickable source links for credibility
 
 ## Current Work Focus
-No active development tasks. The site is live at https://voteforbetter.money and appears feature-complete.
+No active development tasks. Source links feature is complete.
 
 ## Next Steps
-No pending tasks have been identified. Potential future work could include:
+Potential future work could include:
 - Adding new learn articles
 - Updating fallback stats values as economic data changes
 - Adding new external link references

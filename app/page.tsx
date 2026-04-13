@@ -164,6 +164,8 @@ export default async function HomePage() {
               detail="(21,000,000)"
               sublabel="Fixed forever"
               success
+              href={EXTERNAL_LINKS.bitcoinWhitepaper}
+              sourceLabel="Bitcoin Whitepaper"
             />
             <StatCard
               label="US Dollar"
@@ -171,6 +173,8 @@ export default async function HomePage() {
               detail={`(${(parseFloat(stats.m1SupplyTrillions) * 1_000_000_000_000).toLocaleString("en-US", { maximumFractionDigits: 0 })})`}
               sublabel="And counting..."
               danger
+              href={EXTERNAL_LINKS.fredM1}
+              sourceLabel="FRED M1"
             />
           </div>
 
