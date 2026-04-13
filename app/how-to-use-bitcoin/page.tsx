@@ -70,7 +70,7 @@ export default async function HowToUseBitcoinPage() {
             sublabel="Last 4 years"
             success
             href={EXTERNAL_LINKS.btcPriceReport4yr}
-            sourceLabel="BTC Price Report"
+            sourceLabel="Bitcoin Price Report"
           />
           <StatCard
             label="US Dollar"
