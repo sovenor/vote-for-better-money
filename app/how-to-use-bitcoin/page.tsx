@@ -67,7 +67,7 @@ export default async function HowToUseBitcoinPage() {
           <StatCard
             label="Bitcoin"
             value={stats.btcChange4yr ? `+${stats.btcChange4yr}%` : "Gained value"}
-            sublabel="Last 4 years"
+            sublabel="Purchasing power gained over 4 years"
             success
             href={EXTERNAL_LINKS.btcPriceReport4yr}
             sourceLabel="Bitcoin Price Report"
