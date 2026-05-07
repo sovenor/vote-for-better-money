@@ -9,8 +9,7 @@ export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/learn", label: "Learn" },
   { href: "/how-to-use-bitcoin", label: "Use Bitcoin" },
-  { href: "/flyers", label: "Flyers" },
-  { href: "/stickers", label: "Stickers" },
+  { href: "/get-involved", label: "Get Involved" },
 ] as const;
 
 export const LEARN_ARTICLES = [
@@ -62,6 +61,7 @@ export const EXTERNAL_LINKS = {
   nostrPrimal:
     "https://primal.net/p/nprofile1qqsrmqhg7mxxczt9gjln8ey8tgpl2cq2elm7c3n7z59pe3m395s5mjgnfsua2",
   stickersFormUsa: "https://forms.bitcoin.rocks/submit/stickers-vote-usa",
+  github: "https://github.com/sovenor/vote-for-better-money",
   cashApp: "https://cash.app/",
   strike: "https://strike.me/",
   river: "https://river.com/",

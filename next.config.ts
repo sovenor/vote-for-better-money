@@ -20,10 +20,9 @@ const nextConfig: NextConfig = {
       { source: "/contest", destination: "/", permanent: true },
       { source: "/meetup-box", destination: "/", permanent: true },
       { source: "/meetup-box-success", destination: "/", permanent: true },
-      { source: "/get-involved", destination: "/", permanent: true },
       { source: "/nostr", destination: "/", permanent: false },
       // Legacy redirects
-      { source: "/getinvolved", destination: "/", permanent: true },
+      { source: "/getinvolved", destination: "/get-involved", permanent: true },
       { source: "/use-bitcoin", destination: "/how-to-use-bitcoin", permanent: true },
     ];
   },

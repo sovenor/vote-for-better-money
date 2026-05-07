@@ -35,11 +35,8 @@ export default function Footer() {
             >
               Use Bitcoin
             </Link>
-            <Link href="/flyers" className="text-muted hover:text-accent no-underline">
-              Flyers
-            </Link>
-            <Link href="/stickers" className="text-muted hover:text-accent no-underline">
-              Stickers
+            <Link href="/get-involved" className="text-muted hover:text-accent no-underline">
+              Get Involved
             </Link>
             <Link href="/links" className="text-muted hover:text-accent no-underline">
               Share Links
