@@ -10,6 +10,7 @@ export const NAV_LINKS = [
   { href: "/learn", label: "Learn" },
   { href: "/how-to-use-bitcoin", label: "Use Bitcoin" },
   { href: "/flyers", label: "Flyers" },
+  { href: "/stickers", label: "Stickers" },
 ] as const;
 
 export const LEARN_ARTICLES = [
@@ -56,6 +57,11 @@ export const EXTERNAL_LINKS = {
   bitcoinRocks: "https://bitcoin.rocks",
   bitcoinRocksWallets: "https://bitcoin.rocks/wallets",
   bitcoinRocksBusiness: "https://bitcoin.rocks/business/",
+  bitcoinRocksStickers: "https://bitcoin.rocks/stickers",
+  stickerMule: "https://www.stickermule.com/4c84ba884f9c3ae",
+  nostrPrimal:
+    "https://primal.net/p/nprofile1qqsrmqhg7mxxczt9gjln8ey8tgpl2cq2elm7c3n7z59pe3m395s5mjgnfsua2",
+  stickersFormUsa: "https://forms.bitcoin.rocks/submit/stickers-vote-usa",
   cashApp: "https://cash.app/",
   strike: "https://strike.me/",
   river: "https://river.com/",

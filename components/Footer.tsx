@@ -38,6 +38,9 @@ export default function Footer() {
             <Link href="/flyers" className="text-muted hover:text-accent no-underline">
               Flyers
             </Link>
+            <Link href="/stickers" className="text-muted hover:text-accent no-underline">
+              Stickers
+            </Link>
             <Link href="/links" className="text-muted hover:text-accent no-underline">
               Share Links
             </Link>
