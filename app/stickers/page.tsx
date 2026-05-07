@@ -81,7 +81,7 @@ export default function StickersPage() {
       <div className="grid grid-cols-1 gap-4 mt-12">
         <TopicCard
           title="More sticker packs at bitcoin.rocks"
-          description="Get the Text Pack and Signs Pack from our friends at bitcoin.rocks."
+          description="Get more Bitcoin sticker packs from bitcoin.rocks."
           href={EXTERNAL_LINKS.bitcoinRocksStickers}
           external
         />
