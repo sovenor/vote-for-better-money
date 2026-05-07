@@ -125,7 +125,7 @@ export default function GetInvolvedPage() {
 
       <div className="article-content">
         <p>
-          Our flyer carries a QR code that links to an educational page about
+          Each flyer carries a QR code that links to an educational page about
           Bitcoin. Print it, post it on a coffee-shop bulletin board or a
           telephone pole, and you&apos;ve just opened a door for someone you
           may never meet.
