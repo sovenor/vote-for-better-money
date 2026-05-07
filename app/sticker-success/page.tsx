@@ -40,9 +40,9 @@ export default function StickerSuccessPage() {
 
       <div className="article-content">
         <p className="text-lg sm:text-xl text-muted leading-relaxed">
-          <strong className="text-foreground">Thank you!</strong> Your free
-          Vote For Better Money Sticker Pack should arrive in 2–4 weeks. Start
-          thinking about where you&apos;ll put them up.
+          <strong className="text-foreground">Thank you!</strong>{" "}
+          Your free Vote For Better Money Sticker Pack should arrive in 2–4
+          weeks. Start thinking about where you&apos;ll put them up.
         </p>
 
         {/* ── Good Sticker Spots ──────────────────────── */}
