@@ -6,7 +6,7 @@ import TopicCard from "@/components/TopicCard";
 import { EXTERNAL_LINKS, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Free Sticker Pack",
+  title: "Free Bitcoin Sticker Pack",
   description:
     "Order a free Vote For Better Money sticker pack. Help spread the word about Bitcoin — free shipping in the USA.",
   alternates: { canonical: `${SITE_URL}/stickers` },
@@ -31,24 +31,24 @@ export default function StickersPage() {
       <Breadcrumbs items={[{ label: "Stickers" }]} />
 
       <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-        Free Sticker Pack
+        Free Bitcoin Sticker Pack
       </h1>
 
       <div className="article-content">
         <p className="text-lg sm:text-xl text-muted leading-relaxed">
           <strong className="text-foreground">
-            Order a free sticker pack
+            Order a free Bitcoin sticker pack
           </strong>{" "}
           and put them up in public places to help more Americans learn about
-          better money. Looking for other designs? Our friends at{" "}
+          better money. Our friends at bitcoin.rocks offer{" "}
           <a
             href={EXTERNAL_LINKS.bitcoinRocksStickers}
             target="_blank"
             rel="noopener noreferrer"
           >
-            bitcoin.rocks/stickers
+            free Bitcoin sticker packs
           </a>{" "}
-          offer Text and Signs sticker packs too.
+          in other designs.
         </p>
 
         <div className="my-8 rounded-xl bg-card border border-card-border overflow-hidden">

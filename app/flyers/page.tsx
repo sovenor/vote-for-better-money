@@ -134,6 +134,11 @@ export default function FlyersPage() {
           </span>
         </a>
         <TopicCard
+          title="Free Bitcoin Sticker Pack"
+          description="Order a free Vote For Better Money sticker pack and put them up around town."
+          href="/stickers"
+        />
+        <TopicCard
           title="Share Links"
           description="Copy and share direct links to our educational pages."
           href="/links"

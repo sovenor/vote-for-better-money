@@ -119,7 +119,7 @@ export default function StickerAddressForm() {
 
       <input type="hidden" name="_gotcha" style={{ display: "none" }} />
 
-      <p className="text-xs text-muted m-0 pt-2">
+      <p className="text-xs text-muted m-0 pt-2 pb-4">
         Address data is deleted after your free stickers are shipped.
       </p>
 

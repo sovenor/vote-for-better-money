@@ -26,22 +26,25 @@ export const metadata: Metadata = {
 
 const STICKER_FILES = [
   {
-    name: "Classic",
+    name: "Vote For Better Money (Bitcoin Sticker)",
     size: "3.81″ × 2″",
     src: "/img/sticker-files/vfbm-classic-print.png",
-    alt: "Classic Vote For Better Money sticker design",
+    alt: "Vote For Better Money Bitcoin sticker design",
+    printUrl: "https://www.stickermule.com/4c84ba884f9c3ae/item/20315772",
   },
   {
-    name: "Ballot",
+    name: "Cast Your Vote / Ballot (Bitcoin Sticker)",
     size: "3.63″ × 3″",
     src: "/img/sticker-files/vfbm-ballot-print.png",
-    alt: "Ballot-style Vote For Better Money sticker design",
+    alt: "Cast Your Vote / Ballot Bitcoin sticker design",
+    printUrl: "https://www.stickermule.com/4c84ba884f9c3ae/item/20315771",
   },
   {
-    name: "Vote",
+    name: "I Voted for Better Money (Bitcoin Sticker)",
     size: "1.5″ × 1.5″",
     src: "/img/sticker-files/vfbm-voted-print.png",
-    alt: "I Voted For Better Money sticker design",
+    alt: "I Voted for Better Money Bitcoin sticker design",
+    printUrl: "https://www.stickermule.com/4c84ba884f9c3ae/item/20315770",
   },
 ];
 
@@ -106,7 +109,7 @@ export default function StickerFilesPage() {
             </a>
             <div className="flex flex-col items-center text-center gap-3 p-6 pt-2">
               <p className="text-lg font-bold text-foreground m-0">
-                {sticker.name} Size
+                {sticker.name}
               </p>
               <p className="text-sm text-muted m-0">{sticker.size}</p>
               <a
@@ -115,7 +118,15 @@ export default function StickerFilesPage() {
                 rel="noopener noreferrer"
                 className="btn-secondary"
               >
-                Download {sticker.name}
+                Download Sticker
+              </a>
+              <a
+                href={sticker.printUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Print in One Click
               </a>
             </div>
           </div>
@@ -148,7 +159,7 @@ export default function StickerFilesPage() {
         </p>
       </div>
 
-      <div className="my-8">
+      <div className="my-8 flex justify-center">
         <a
           href={EXTERNAL_LINKS.stickerMule}
           target="_blank"
@@ -162,7 +173,7 @@ export default function StickerFilesPage() {
       {/* ── Related ────────────────────────────────── */}
       <div className="grid grid-cols-1 gap-4 mt-12">
         <TopicCard
-          title="Free Sticker Pack"
+          title="Free Bitcoin Sticker Pack"
           description="Have us mail you a free Vote For Better Money sticker pack instead."
           href="/stickers"
         />
