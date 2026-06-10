@@ -14,14 +14,17 @@ export async function register() {
       console.error("[cron] Initial refresh failed:", err)
     );
 
-    // Schedule daily refresh at 6:00 AM UTC
-    cron.default.schedule("0 6 * * *", () => {
+    // Schedule daily refresh at 14:00 UTC.
+    // Avoid early-morning US hours (~06:00 UTC = ~1-2 AM ET): the FRED API
+    // (api.stlouisfed.org) is unreliable during its nightly maintenance/data-load
+    // window, which silently blanked all FRED-backed stats. 14:00 UTC is well clear.
+    cron.default.schedule("0 14 * * *", () => {
       console.log("[cron] Running daily stats refresh...");
       refreshStats().catch((err) =>
         console.error("[cron] Daily refresh failed:", err)
       );
     });
 
-    console.log("[cron] Daily stats refresh scheduled for 6:00 AM UTC");
+    console.log("[cron] Daily stats refresh scheduled for 14:00 UTC");
   }
 }

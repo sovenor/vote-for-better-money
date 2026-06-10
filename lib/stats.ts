@@ -30,7 +30,7 @@ const FALLBACK_STATS: SiteStats = {
   bitcoinPercentMined: "94",
   btcPrice: "",
   btcChange4yr: "",
-  usdInflation4yr: "",
+  usdInflation4yr: "13",
   lastUpdated: new Date().toISOString(),
 };
 
@@ -59,20 +59,63 @@ function writeStatsFile(stats: SiteStats): void {
 
 // ── External API fetchers ─────────────────────────────────────────────
 
+type FredResponse = {
+  observations?: Array<{ date: string; value: string }>;
+};
+
+/** Attempts per FRED call before giving up. */
+const FRED_MAX_ATTEMPTS = 3;
+
+function sleep(ms: number): Promise<void> {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+/**
+ * Fetch JSON from the FRED API with retry + linear backoff.
+ *
+ * FRED's nightly maintenance window can return transient HTTP errors or
+ * timeouts; a single bad response used to silently blank every FRED-backed
+ * stat for 24h. Retrying rides over brief blips, and logging every failure
+ * makes outages visible instead of silently falling back.
+ */
+async function fetchFredJson(
+  url: string,
+  label: string
+): Promise<FredResponse | null> {
+  for (let attempt = 1; attempt <= FRED_MAX_ATTEMPTS; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
+      if (res.ok) {
+        return (await res.json()) as FredResponse;
+      }
+      console.error(
+        `[stats] FRED ${label} HTTP ${res.status} (attempt ${attempt}/${FRED_MAX_ATTEMPTS})`
+      );
+    } catch (err) {
+      console.error(
+        `[stats] FRED ${label} fetch error (attempt ${attempt}/${FRED_MAX_ATTEMPTS}):`,
+        err instanceof Error ? err.message : err
+      );
+    }
+    if (attempt < FRED_MAX_ATTEMPTS) await sleep(1000 * attempt);
+  }
+  console.error(`[stats] FRED ${label} failed after ${FRED_MAX_ATTEMPTS} attempts`);
+  return null;
+}
+
 async function fetchFredSeries(seriesId: string): Promise<number | null> {
   const apiKey = process.env.FRED_API_KEY;
-  if (!apiKey) return null;
-
-  try {
-    const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&sort_order=desc&limit=1&file_type=json&api_key=${apiKey}`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
-    if (!res.ok) return null;
-    const data = await res.json();
-    const value = data?.observations?.[0]?.value;
-    return value && value !== "." ? parseFloat(value) : null;
-  } catch {
+  if (!apiKey) {
+    console.error("[stats] FRED_API_KEY is not set");
     return null;
   }
+
+  const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesId}&sort_order=desc&limit=1&file_type=json&api_key=${apiKey}`;
+  const data = await fetchFredJson(url, seriesId);
+  if (!data) return null;
+
+  const value = data.observations?.[0]?.value;
+  return value && value !== "." ? parseFloat(value) : null;
 }
 
 async function fetchBitcoinMined(): Promise<{
@@ -149,36 +192,34 @@ async function fetchBtcPrice(): Promise<{
 
 async function fetchInflation(): Promise<number | null> {
   const apiKey = process.env.FRED_API_KEY;
-  if (!apiKey) return null;
-
-  try {
-    const url =
-      `https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=60&file_type=json&api_key=${apiKey}`;
-    const res = await fetch(url, { signal: AbortSignal.timeout(15000) });
-    if (!res.ok) return null;
-    const data = await res.json();
-    const observations = data?.observations;
-    if (!observations || observations.length < 2) return null;
-
-    const latest = parseFloat(observations[0]?.value);
-
-    const fourYearsAgoMs = Date.now() - 4 * 365.25 * 24 * 60 * 60 * 1000;
-    let oldCpi: number | null = null;
-    for (const obs of observations) {
-      const obsDate = new Date(obs.date).getTime();
-      if (obsDate <= fourYearsAgoMs && obs.value !== ".") {
-        oldCpi = parseFloat(obs.value);
-        break;
-      }
-    }
-
-    if (oldCpi && latest && oldCpi > 0) {
-      return ((latest - oldCpi) / oldCpi) * 100;
-    }
-    return null;
-  } catch {
+  if (!apiKey) {
+    console.error("[stats] FRED_API_KEY is not set");
     return null;
   }
+
+  const url = `https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&sort_order=desc&limit=60&file_type=json&api_key=${apiKey}`;
+  const data = await fetchFredJson(url, "CPIAUCSL");
+  if (!data) return null;
+
+  const observations = data.observations;
+  if (!observations || observations.length < 2) return null;
+
+  const latest = parseFloat(observations[0]?.value);
+
+  const fourYearsAgoMs = Date.now() - 4 * 365.25 * 24 * 60 * 60 * 1000;
+  let oldCpi: number | null = null;
+  for (const obs of observations) {
+    const obsDate = new Date(obs.date).getTime();
+    if (obsDate <= fourYearsAgoMs && obs.value !== ".") {
+      oldCpi = parseFloat(obs.value);
+      break;
+    }
+  }
+
+  if (oldCpi && latest && oldCpi > 0) {
+    return ((latest - oldCpi) / oldCpi) * 100;
+  }
+  return null;
 }
 
 // ── Public API ────────────────────────────────────────────────────────

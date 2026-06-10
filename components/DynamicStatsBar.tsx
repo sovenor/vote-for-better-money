@@ -24,7 +24,7 @@ export default function DynamicStatsBar() {
             ? `+${stats.btcChange4yr}%`
             : stats === null
               ? "..."
-              : "Gained value"
+              : "—"
         }
         sublabel="Purchasing power gained over 4 years"
         success
@@ -38,7 +38,7 @@ export default function DynamicStatsBar() {
             ? `-${stats.usdInflation4yr}%`
             : stats === null
               ? "..."
-              : "Lost value"
+              : "—"
         }
         sublabel="Purchasing power lost over 4 years"
         danger
